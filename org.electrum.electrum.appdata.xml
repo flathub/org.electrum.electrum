@@ -2,41 +2,70 @@
 <component type="desktop-application">
   <id>org.electrum.electrum</id>
   <name>Electrum</name>
-  <developer_name>Thomas Voegtlin</developer_name>
-  <developer_name>SomberNight</developer_name>
-  <developer_name>EagleTM</developer_name>
+  <developer_name>Thomas Voegtlin, et al.</developer_name>
   <launchable type="desktop-id">org.electrum.electrum.desktop</launchable>
   <content_rating type="oars-1.1" />
   <summary>Lightweight Bitcoin client</summary>
   <description>
     <p>
-      Main features are:
-      <ul>
-	<li>- Encrypted wallet: the file that contains bitcoin private keys is protected with a password, and never leaves the user's computer</li>
-	<li>- Deterministic key generation: If you lose your wallet file, you can recover it from its seed. You are protected from your own mistakes</li>
-	<li>- Instant on: by default the client does not download the blockchain, it requests that information from a server. No delays, always up-to-date</li>
-	<li>- Transactions are signed locally: Your private keys are not shared with the server. You do not have to trust the server with your money</li>
-	<li>- Cold storage: Keeping private keys offline is supported. Has a watch-only mode for online use</li>
-	<li>- Multisignature: Dividing the power to spend coins between multiple wallets is supported</li>
-	<li>- Hardware wallet integration: Many leading hardware wallets can interface with Electrum</li>
-	<li>- Redundancy: You are not tied to a particular server, and the server does not need to know you. One server going down doesn't cause user downtimes</li>
-	<li>- No single point of failure: The server code is open source, anyone can run a server. Private keys can be exported and imported into other wallets</li>
-	<li>- Firewall friendly: The client does not need to open a port, it simply polls the server for updates</li>
-	<li>- Free software: MIT License. Anyone can audit the code</li>
-	<li>- Written in Python. The code is short, and easy to review</li>
-	<li>- Add-ons: third-party plugins are supported</li>
-	<li>- Support for Bitcoin URIs, signed URIs and Bitcoin aliases.</li>
-      </ul>
+      Electrum's focus is speed and simplicity, with low resource usage. It uses remote servers that handle the most complicated parts of the Bitcoin system, and it allows you to recover your wallet from a secret phrase.
     </p>
+    <p>
+      Do not trust. Verify.
+
+      Electrum verifies that your transactions
+      are in the Bitcoin blockchain.
+
+      Because Bitcoin is not about trust,
+      It is about freedom and independence.
+    </p>
+    <p>
+      Main features are:
+    </p>
+    <ul>
+      <li>Safe: Your private keys are encrypted and never leave your computer</li>
+      <li>Forgiving: Your funds can be recovered from a secret phrase</li>
+      <li>Instant On: Electrum is fast, because it uses servers that index the Bitcoin blockchain</li>
+      <li>No lock-In: You can export your private keys and use them in other Bitcoin clients</li>
+      <li>No Downtimes: Electrum servers are decentralized and redundant. Your wallet is never down</li>
+      <li>Proof Checking: Electrum Wallet verifies all the transactions in your history using SPV</li>
+      <li>Cold Storage: Keep your private keys offline, and go online with a watching-only wallet</li>
+      <li>Multisig: Split the permission to spend your coins between several wallets</li>
+      <li>Add-ons: Electrum supports third-party plugins: Multisig services, Hardware wallets, etc</li>
+    </ul>
   </description>
+
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT</project_license>
+
   <url type="homepage">https://electrum.org/</url>
+  <url type="bugtracker">https://github.com/spesmilo/electrum/issues</url>
+  <url type="help">http://docs.electrum.org/en/latest/</url>
+  <translation></translation>
+
   <screenshots>
-    <screenshot>https://bitcoin.org/img/screenshots/electrum.png?1528322191</screenshot>
+    <screenshot>https://jonny.fedorapeople.org/electrum-2.7.12-screenshot-gnome/06-main-empty.png</screenshot>
   </screenshots>
   <releases>
-    <release date="2019-01-26" version="3.3.8"/>
-  </releases>
-  <update_contact>electrumdev_at_gmail.com</update_contact>
+    <release date="2019-07-11" version="3.3.8">
+      <description>
+	<p>
+	  Electrum 3.3.8 is here with another round of fixes:
+	</p>
+	<ul>
+	  <li>Fix some bugs with recent bump fee (RBF) improvements (#5483, #5502)</li>
+	  <li>Fix #5491: watch-only wallets could not bump fee in some cases</li>
+	  <li>Appimage: URLs could not be opened on some desktop environments (#5425)</li>
+	  <li>Faster tx signing for segwit inputs for really large txns (#5494)</li>
+	  <li>A few other minor bugfixes and usability improvements</li>
+	</ul>
+      </description>
+    </release>
+    <release date="2019-07-03" version="3.3.7"/>
+    <release date="2019-05-16" version="3.3.6"/>
+    <release date="2019-05-09" version="3.3.5"/>
+    <release date="2019-02-13" version="3.3.4"/>
+    <release date="2019-01-25" version="3.3.3"/>
+</releases>
+<update_contact>electrumdev_at_gmail.com</update_contact>
 </component>
