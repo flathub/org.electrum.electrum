@@ -26,7 +26,7 @@
             "name": "electrum",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --prefix=/app .[fast]",
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[fast]",
                 "install -Dp -m 644 org.electrum.electrum.appdata.xml /app/share/metainfo/org.electrum.electrum.appdata.xml"
             ],
             "post-install": [
