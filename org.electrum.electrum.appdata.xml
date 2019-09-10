@@ -49,16 +49,16 @@
   <releases>
     <release date="2019-07-11" version="3.3.8">
       <description>
-	<p>
-	  Electrum 3.3.8 is here with another round of fixes:
-	</p>
-	<ul>
-	  <li>Fix some bugs with recent bump fee (RBF) improvements (#5483, #5502)</li>
-	  <li>Fix #5491: watch-only wallets could not bump fee in some cases</li>
-	  <li>Appimage: URLs could not be opened on some desktop environments (#5425)</li>
-	  <li>Faster tx signing for segwit inputs for really large txns (#5494)</li>
-	  <li>A few other minor bugfixes and usability improvements</li>
-	</ul>
+        <p>
+          Electrum 3.3.8 is here with another round of fixes:
+        </p>
+        <ul>
+          <li>Fix some bugs with recent bump fee (RBF) improvements (#5483, #5502)</li>
+          <li>Fix #5491: watch-only wallets could not bump fee in some cases</li>
+          <li>Appimage: URLs could not be opened on some desktop environments (#5425)</li>
+          <li>Faster tx signing for segwit inputs for really large txns (#5494)</li>
+          <li>A few other minor bugfixes and usability improvements</li>
+        </ul>
       </description>
     </release>
     <release date="2019-07-03" version="3.3.7"/>
@@ -67,5 +67,5 @@
     <release date="2019-02-13" version="3.3.4"/>
     <release date="2019-01-25" version="3.3.3"/>
 </releases>
-<update_contact>electrumdev_at_gmail.com</update_contact>
+<update_contact>msandova_at_protonmail.com</update_contact>
 </component>
