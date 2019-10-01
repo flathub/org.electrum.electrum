@@ -2,61 +2,54 @@
     "id": "org.electrum.electrum",
     "sdk": "org.kde.Sdk",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.12",
+    "runtime-version": "5.13",
     "rename-icon": "electrum",
     "rename-desktop-file": "electrum.desktop",
     "command": "electrum",
     "finish-args": [
-	/* Wayland and Xorg support */
-	"--socket=x11",
-	"--socket=wayland",
-	/* Sound */
-	"--socket=pulseaudio",
-	/* Persistent storage */
-	"--persist=.electrum",
-	/* OpenGL access. */
-	"--device=dri",
-	"--share=ipc",
-	/* Network acess. */
-	"--share=network"
+        /* Wayland and Xorg support */
+        "--socket=x11",
+        "--socket=wayland",
+        /* Sound */
+        "--socket=pulseaudio",
+        /* Persistent storage */
+        "--persist=.electrum",
+        /* OpenGL access. */
+        "--device=dri",
+        "--share=ipc",
+        /* Network acess. */
+        "--share=network"
     ],
     "modules": [
-	"python3-PyQt5.json",
-	"python3-pyaes.json",
-	"python3-ecdsa.json",
-	"python3-qrcode.json",
-	"python3-dnspython.json",
-	"python3-jsonrpclib-pelix.json",
-	"python3-qdarkstyle.json",
-	"python3-aiorpcx.json",
-	"python3-aiohttp.json",
-	"python3-protobuf.json",
-	"python3-aiohttp_socks.json",
-	"python3-certifi.json",
-	"python3-pycryptodomex.json",
-	{
-	    "name": "electrum",
-	    "buildsystem": "simple",
-	    "build-commands": [
-		"pip3 install --prefix=/app .[fast]",
-		"install -Dp -m 644 org.electrum.electrum.appdata.xml /app/share/metainfo/org.electrum.electrum.appdata.xml"
-	    ],
-	    "sources": [
-		{
-		    "type": "git",
-		    "url": "https://github.com/spesmilo/electrum.git",
-		    "commit": "e81f4bdcd11a072e7c4f38fb1c7eec19c2f7e1a8",
-		    "tag": "3.3.8"
-		},
-		{
-		    "type": "patch",
-		    "path": "patch.patch"
-		},
-		{
-		    "type": "file",
-		    "path": "org.electrum.electrum.appdata.xml"
-		}
-	    ]
-	}
+        "python3-modules.json",
+        "python3-pycryptodomex.json",
+        "python3-pyQt5.json",
+        {
+            "name": "electrum",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[fast]",
+                "install -Dp -m 644 org.electrum.electrum.appdata.xml /app/share/metainfo/org.electrum.electrum.appdata.xml"
+            ],
+            "post-install": [
+                "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=electrum --set-key=Icon --set-value=org.electrum.electrum electrum.desktop"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/spesmilo/electrum.git",
+                    "commit": "e81f4bdcd11a072e7c4f38fb1c7eec19c2f7e1a8",
+                    "tag": "3.3.8"
+                },
+                {
+                    "type": "patch",
+                    "path": "electrum-setup.patch"
+                },
+                {
+                    "type": "file",
+                    "path": "org.electrum.electrum.appdata.xml"
+                }
+            ]
+        }
     ]
 }
