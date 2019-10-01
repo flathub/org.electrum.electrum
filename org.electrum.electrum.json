@@ -2,7 +2,7 @@
     "id": "org.electrum.electrum",
     "sdk": "org.kde.Sdk",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.12",
+    "runtime-version": "5.13",
     "rename-icon": "electrum",
     "rename-desktop-file": "electrum.desktop",
     "command": "electrum",
@@ -22,6 +22,8 @@
     ],
     "modules": [
         "python3-modules.json",
+        "python3-pycryptodomex.json",
+        "python3-pyQt5.json",
         {
             "name": "electrum",
             "buildsystem": "simple",
