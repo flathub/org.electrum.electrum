@@ -24,12 +24,17 @@
         "python3-modules.json",
         "python3-pycryptodomex.json",
         "python3-pyQt5.json",
+        "libusb.json",
+        "python3-cython.json",
+        "python3-hidapi.json",
+        "python3-trezor_agent.json",
         {
             "name": "electrum",
             "buildsystem": "simple",
             "build-commands": [
                 "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[fast]",
-                "install -Dp -m 644 org.electrum.electrum.appdata.xml /app/share/metainfo/org.electrum.electrum.appdata.xml"
+                "install -Dp -m 644 org.electrum.electrum.appdata.xml /app/share/metainfo/org.electrum.electrum.appdata.xml",
+                "install -Dp -m 644 electrum/gui/icons/electrum.png /app/share/icons/hicolor/128x128/apps/electrum.png"
             ],
             "post-install": [
                 "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=electrum --set-key=Icon --set-value=org.electrum.electrum electrum.desktop"
