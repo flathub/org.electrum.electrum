@@ -21,13 +21,28 @@
         "--share=network"
     ],
     "modules": [
-        "python3-modules.json",
-        "python3-pycryptodomex.json",
-        "python3-pyQt5.json",
         "libusb.json",
         "python3-cython.json",
+        "python3-modules.json",
+        "python3-bitstring.json",
+        "python3-pycryptodomex.json",
+        "python3-pyQt5.json",
         "python3-hidapi.json",
         "python3-trezor_agent.json",
+        {
+            "name": "secp256k1",
+            "buildsystem": "autotools",
+            "config-opts": [
+                "--enable-module-recovery"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/bitcoin-core/secp256k1.git",
+                    "commit": "dbd41db16a0e91b2566820898a3ab2d7dad4fe00"
+                }
+            ]
+        },
         {
             "name": "electrum",
             "buildsystem": "simple",
@@ -43,8 +58,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/spesmilo/electrum.git",
-                    "commit": "e81f4bdcd11a072e7c4f38fb1c7eec19c2f7e1a8",
-                    "tag": "3.3.8"
+                    "commit": "10c21834613318f15bd30213fa52eaada50d1285"
                 },
                 {
                     "type": "patch",
