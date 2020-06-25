@@ -21,7 +21,7 @@
         "--share=network"
     ],
     "modules": [
-        "libusb.json",
+        "shared-modules/libusb/libusb.json",
         "python3-cython.json",
         "python3-modules.json",
         "python3-bitstring.json",
