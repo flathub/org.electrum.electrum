@@ -2,7 +2,6 @@
     "name" : "pyqt5",
     "config-opts" : [
         "--disable-static",
-        "--jobs=8",
         "--enable-x11"
     ],
     "sources" : [
