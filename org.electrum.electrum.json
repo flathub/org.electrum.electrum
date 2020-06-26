@@ -5,9 +5,10 @@
     "runtime-version": "5.14",
     "command": "electrum",
     "finish-args": [
-        /* Wayland and Xorg support */
+        /* Xorg support */
         "--socket=x11",
-        "--socket=wayland",
+        "--env=QT_QPA_PLATFORM=xcb",
+        "--env=SESSION_MANAGER=",
         /* Sound */
         "--socket=pulseaudio",
         /* Persistent storage */
@@ -19,10 +20,7 @@
         "--share=network"
     ],
     "modules": [
-        "python3-PyQt5.json",
         "shared-modules/libusb/libusb.json",
-        "python3-Cython.json",
-        "python3-modules.json",
         {
             "name": "secp256k1",
             "config-opts": [
@@ -44,11 +42,14 @@
                 "install -Dm644 COPYING /app/share/licenses/libsecp256k1/COPYING"
             ]
         },
+        "python3-PyQt5.json",
+        "python3-Cython.json",
+        "python3-modules.json",
         {
             "name": "electrum",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[fast]",
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[full]",
                 "install -Dp -m 644 org.electrum.electrum.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml",
                 "install -Dp -m 644 electrum/gui/icons/electrum.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png",
                 "install -Dp -m 644 electrum.desktop /app/share/applications/${FLATPAK_ID}.desktop",
