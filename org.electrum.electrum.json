@@ -3,8 +3,6 @@
     "sdk": "org.kde.Sdk",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.14",
-    "rename-icon": "electrum",
-    "rename-desktop-file": "electrum.desktop",
     "command": "electrum",
     "finish-args": [
         /* Wayland and Xorg support */
@@ -21,14 +19,10 @@
         "--share=network"
     ],
     "modules": [
-        "python3-pyQt5.json",
+        "python3-PyQt5.json",
         "shared-modules/libusb/libusb.json",
-        "python3-cython.json",
+        "python3-Cython.json",
         "python3-modules.json",
-        "python3-bitstring.json",
-        "python3-pycryptodomex.json",
-        "python3-hidapi.json",
-        "python3-trezor_agent.json",
         {
             "name": "secp256k1",
             "buildsystem": "autotools",
@@ -48,17 +42,18 @@
             "buildsystem": "simple",
             "build-commands": [
                 "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[fast]",
-                "install -Dp -m 644 org.electrum.electrum.metainfo.xml /app/share/metainfo/org.electrum.electrum.metainfo.xml",
-                "install -Dp -m 644 electrum/gui/icons/electrum.png /app/share/icons/hicolor/128x128/apps/electrum.png"
-            ],
-            "post-install": [
-                "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=electrum --set-key=Icon --set-value=org.electrum.electrum electrum.desktop"
+                "install -Dp -m 644 org.electrum.electrum.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml",
+                "install -Dp -m 644 electrum/gui/icons/electrum.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png",
+                "install -Dp -m 644 electrum.desktop /app/share/applications/${FLATPAK_ID}.desktop",
+                "desktop-file-edit --set-key=\"Icon\" --set-value=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop",
+                "desktop-file-edit --set-key=\"Exec\" --set-value=electrum /app/share/applications/${FLATPAK_ID}.desktop"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/spesmilo/electrum.git",
-                    "commit": "10c21834613318f15bd30213fa52eaada50d1285"
+                    "commit": "2db0ad10db7ae2a55900d06c3f788d01507d678e",
+                    "tag": "4.0.0b1"
                 },
                 {
                     "type": "patch",

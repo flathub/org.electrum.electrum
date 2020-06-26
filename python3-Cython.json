@@ -1,8 +1,8 @@
 {
-    "name": "python3-cython",
+    "name": "python3-Cython",
     "buildsystem": "simple",
     "build-commands": [
-        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} cython"
+        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} Cython"
     ],
     "sources": [
         {
