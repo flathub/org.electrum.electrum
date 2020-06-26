@@ -25,9 +25,13 @@
         "python3-modules.json",
         {
             "name": "secp256k1",
-            "buildsystem": "autotools",
             "config-opts": [
-                "--enable-module-recovery"
+                "--enable-module-recovery",
+                "--disable-static"
+            ],
+            "cleanup": [
+                "/lib/*.la",
+                "/lib/pkgconfig"
             ],
             "sources": [
                 {
@@ -35,6 +39,9 @@
                     "url": "https://github.com/bitcoin-core/secp256k1.git",
                     "commit": "dbd41db16a0e91b2566820898a3ab2d7dad4fe00"
                 }
+            ],
+            "post-install": [
+                "install -Dm644 COPYING /app/share/licenses/libsecp256k1/COPYING"
             ]
         },
         {
