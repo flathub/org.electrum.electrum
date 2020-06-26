@@ -7,8 +7,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/d9/82/d01e767abb9c4a5c07a6a1e6f4d5a8dfce7369318d31f48a52374094372e/Cython-0.29.15.tar.gz",
-            "sha256": "60d859e1efa5cc80436d58aecd3718ff2e74b987db0518376046adedba97ac30"
+            "url": "https://files.pythonhosted.org/packages/3f/61/16a435de52fcda15246597a602aab6132cea50bedeb0919cb8874a068a20/Cython-0.29.20.tar.gz",
+            "sha256": "22d91af5fc2253f717a1b80b8bb45acb655f643611983fd6f782b9423f8171c7"
         }
     ]
 }

@@ -21,12 +21,12 @@
         "--share=network"
     ],
     "modules": [
+        "python3-pyQt5.json",
         "shared-modules/libusb/libusb.json",
         "python3-cython.json",
         "python3-modules.json",
         "python3-bitstring.json",
         "python3-pycryptodomex.json",
-        "python3-pyQt5.json",
         "python3-hidapi.json",
         "python3-trezor_agent.json",
         {
