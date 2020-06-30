@@ -3,8 +3,6 @@
     "sdk": "org.kde.Sdk",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.14",
-    "rename-icon": "electrum",
-    "rename-desktop-file": "electrum.desktop",
     "command": "electrum",
     "finish-args": [
         /* Wayland and Xorg support */
@@ -33,9 +31,12 @@
             "name": "electrum",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[fast]",
-                "install -Dp -m 644 org.electrum.electrum.appdata.xml /app/share/metainfo/org.electrum.electrum.appdata.xml",
-                "install -Dp -m 644 electrum/gui/icons/electrum.png /app/share/icons/hicolor/128x128/apps/electrum.png"
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[fast]",
+                "install -Dp -m 644 org.electrum.electrum.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml",
+                "install -Dp -m 644 electrum/gui/icons/electrum.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png",
+                "install -Dp -m 644 electrum.desktop /app/share/applications/${FLATPAK_ID}.desktop",
+                "desktop-file-edit --set-key=\"Icon\" --set-value=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop",
+                "desktop-file-edit --set-key=\"Exec\" --set-value=electrum /app/share/applications/${FLATPAK_ID}.desktop"
             ],
             "post-install": [
                 "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=electrum --set-key=Icon --set-value=org.electrum.electrum electrum.desktop"
@@ -53,7 +54,7 @@
                 },
                 {
                     "type": "file",
-                    "path": "org.electrum.electrum.appdata.xml"
+                    "path": "org.electrum.electrum.metainfo.xml"
                 }
             ]
         }
