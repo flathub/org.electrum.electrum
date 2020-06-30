@@ -7,7 +7,6 @@
     "finish-args": [
         /* Wayland and Xorg support */
         "--socket=x11",
-        "--socket=wayland",
         /* Sound */
         "--socket=pulseaudio",
         /* Persistent storage */
@@ -21,32 +20,26 @@
     "modules": [
         "shared-modules/libusb/libusb.json",
         "libsecp256k1.json",
-        "python3-modules.json",
-        "python3-pycryptodomex.json",
-        "python3-pyQt5.json",
-        "python3-cython.json",
-        "python3-hidapi.json",
-        "python3-trezor_agent.json",
+        "python3-requirements-bin.json",
+        "python3-requirements.json",
+        "python3-requirements-hw.json",
         {
             "name": "electrum",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[fast]",
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[full]",
                 "install -Dp -m 644 org.electrum.electrum.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml",
                 "install -Dp -m 644 electrum/gui/icons/electrum.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png",
                 "install -Dp -m 644 electrum.desktop /app/share/applications/${FLATPAK_ID}.desktop",
                 "desktop-file-edit --set-key=\"Icon\" --set-value=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop",
                 "desktop-file-edit --set-key=\"Exec\" --set-value=electrum /app/share/applications/${FLATPAK_ID}.desktop"
             ],
-            "post-install": [
-                "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=electrum --set-key=Icon --set-value=org.electrum.electrum electrum.desktop"
-            ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/spesmilo/electrum.git",
-                    "commit": "e81f4bdcd11a072e7c4f38fb1c7eec19c2f7e1a8",
-                    "tag": "3.3.8"
+                    "commit": "2db0ad10db7ae2a55900d06c3f788d01507d678e",
+                    "tag": "4.0.0b1"
                 },
                 {
                     "type": "patch",
