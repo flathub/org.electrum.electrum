@@ -4,7 +4,7 @@
   <name>Electrum</name>
   <developer_name>Thomas Voegtlin, et al.</developer_name>
   <launchable type="desktop-id">org.electrum.electrum.desktop</launchable>
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
   <summary>Lightweight Bitcoin client</summary>
   <description>
     <p>
@@ -12,7 +12,8 @@
     </p>
     <p>
       Do not trust. Verify.
-
+    </p>
+    <p>
       Electrum verifies that your transactions
       are in the Bitcoin blockchain.
 
@@ -44,7 +45,7 @@
   <translation></translation>
 
   <screenshots>
-    <screenshot>https://jonny.fedorapeople.org/electrum-2.7.12-screenshot-gnome/06-main-empty.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/flathub/org.electrum.electrum/master/screenshots/electrum.png</screenshot>
   </screenshots>
   <releases>
     <release date="2019-07-11" version="3.3.8">
