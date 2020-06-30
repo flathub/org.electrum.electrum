@@ -19,11 +19,11 @@
         "--share=network"
     ],
     "modules": [
+        "shared-modules/libusb/libusb.json",
         "libsecp256k1.json",
         "python3-modules.json",
         "python3-pycryptodomex.json",
         "python3-pyQt5.json",
-        "libusb.json",
         "python3-cython.json",
         "python3-hidapi.json",
         "python3-trezor_agent.json",
