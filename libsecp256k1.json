@@ -1,6 +1,9 @@
 {
     "name": "libsecp256k1",
-    "config-opts": [ "--disable-static" ],
+    "config-opts": [
+        "--enable-module-recovery",
+        "--disable-static"
+    ],
     "cleanup": [
         "/lib/*.la",
         "/lib/pkgconfig"
@@ -9,7 +12,7 @@
         {
             "type": "git",
             "url": "https://github.com/bitcoin-core/secp256k1",
-            "commit": "3a6fd7f636da5c6ee0702ab0ac40ff9f99753b7b"
+            "commit": "HEAD"
         }
     ],
     "post-install": [
