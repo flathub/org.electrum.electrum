@@ -1,5 +1,5 @@
 {
-    "name": "pypi-dependencies",
+    "name": "python3-requirements",
     "buildsystem": "simple",
     "build-commands": [],
     "modules": [

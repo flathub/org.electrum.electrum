@@ -1,5 +1,5 @@
 {
-    "name": "requirements-hw",
+    "name": "python3-requirements-hw",
     "buildsystem": "simple",
     "build-commands": [],
     "modules": [
@@ -18,7 +18,7 @@
             ]
         },
         {
-            "name": "python3-trezor[hidapi]",
+            "name": "python3-trezor",
             "buildsystem": "simple",
             "build-commands": [
                 "env C_INCLUDE_PATH=/app/include/libusb-1.0 pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} trezor[hidapi]"
@@ -53,11 +53,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/d2/3d/fa76db83bf75c4f8d338c2fd15c8d33fdd7ad23a9b5e57eb6c5de26b430e/click-7.1.2-py2.py3-none-any.whl",
                     "sha256": "dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e9/93/4860cebd5ad3ff2664ad3c966490ccb46e3b88458b2095145bca11727ca4/setuptools-47.3.1-py3-none-any.whl",
-                    "sha256": "4ba6f9789ea243a6b8ba57da81f75a53494456117810436fd9277a74d1c915d1"
                 },
                 {
                     "type": "file",
@@ -135,11 +130,6 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e9/93/4860cebd5ad3ff2664ad3c966490ccb46e3b88458b2095145bca11727ca4/setuptools-47.3.1-py3-none-any.whl",
-                    "sha256": "4ba6f9789ea243a6b8ba57da81f75a53494456117810436fd9277a74d1c915d1"
-                },
-                {
-                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/27/5c/4d1ebbcfb19071832ac9b4e4674435f4a33e34b8d5186d4aac9ff374f83c/libusb1-1.8.tar.gz",
                     "sha256": "240f65ac70ba3fab77749ec84a412e4e89624804cb80d6c9d394eef5af8878d6"
                 },
@@ -189,11 +179,6 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e9/93/4860cebd5ad3ff2664ad3c966490ccb46e3b88458b2095145bca11727ca4/setuptools-47.3.1-py3-none-any.whl",
-                    "sha256": "4ba6f9789ea243a6b8ba57da81f75a53494456117810436fd9277a74d1c915d1"
-                },
-                {
-                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/27/5c/4d1ebbcfb19071832ac9b4e4674435f4a33e34b8d5186d4aac9ff374f83c/libusb1-1.8.tar.gz",
                     "sha256": "240f65ac70ba3fab77749ec84a412e4e89624804cb80d6c9d394eef5af8878d6"
                 },
@@ -221,11 +206,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz",
                     "sha256": "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/95/fe/2687907be1d6291a84a9b51220595a4f89d9477032c57f21e7c633465540/setuptools-47.3.1.zip",
-                    "sha256": "843037738d1e34e8b326b5e061f474aca6ef9d7ece41329afbc8aac6195a3920"
                 },
                 {
                     "type": "file",
@@ -263,13 +243,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6c/80/e3fcd6c86144e1f68313fb71db02ec88c403480e951ea362f2ea4c8e6451/btchip-python-0.1.29.tar.gz",
-                    "sha256": "36e335a7e5ef22b37cdbc7be0f7f80b42479374bbf1d597fa593061bc2386a2b"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e9/93/4860cebd5ad3ff2664ad3c966490ccb46e3b88458b2095145bca11727ca4/setuptools-47.3.1-py3-none-any.whl",
-                    "sha256": "4ba6f9789ea243a6b8ba57da81f75a53494456117810436fd9277a74d1c915d1"
+                    "url": "https://files.pythonhosted.org/packages/a9/20/1eeda466e982965cab498aed7a624e16cadbca719be83603443ba582ce21/btchip-python-0.1.30.tar.gz",
+                    "sha256": "6869c67a712969ae86af23617f6418049076626f8a8c34d1000b1c58a9702ad7"
                 }
             ]
         },
@@ -289,11 +264,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/44/66/2c17bae31c906613795711fc78045c285048168919ace2220daa372c7d72/pyaes-1.6.1.tar.gz",
                     "sha256": "02c1b1405c38d3c370b085fb952dd8bea3fadcee6411ad99f312cc129c536d8f"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e9/93/4860cebd5ad3ff2664ad3c966490ccb46e3b88458b2095145bca11727ca4/setuptools-47.3.1-py3-none-any.whl",
-                    "sha256": "4ba6f9789ea243a6b8ba57da81f75a53494456117810436fd9277a74d1c915d1"
                 },
                 {
                     "type": "file",
@@ -327,13 +297,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/35/bc/0ba2600be27d0e9fcdbbb5928ce57df953010e9ca3e5a318ab008ad5d3a6/bitbox02-3.0.0.tar.gz",
-                    "sha256": "31ad87cc3005cce1c73cdae8dcc919a7ed62c53eb0767518aaa3dc4b199bd112"
+                    "url": "https://files.pythonhosted.org/packages/6a/28/d32852f2af6b5ead85d396249d5bdf450833f3a69896d76eb480d9c5e406/typing_extensions-3.7.4.2.tar.gz",
+                    "sha256": "79ee589a3caca649a9bfd2a8de4709837400dfa00b6cc81962a1e6a1815969ae"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6a/28/d32852f2af6b5ead85d396249d5bdf450833f3a69896d76eb480d9c5e406/typing_extensions-3.7.4.2.tar.gz",
-                    "sha256": "79ee589a3caca649a9bfd2a8de4709837400dfa00b6cc81962a1e6a1815969ae"
+                    "url": "https://files.pythonhosted.org/packages/92/bd/465eb8223a98e5884ac3c8861e2c08e162f6b2aa71743a1e4a7bdc23abbb/bitbox02-4.0.0-py3-none-any.whl",
+                    "sha256": "b893223a021407145bc45830c1ef11c479044e32c1ae284712919baaa03dda9a"
                 },
                 {
                     "type": "file",
@@ -342,18 +312,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/0c/0e/3f026d0645d699e7320b59952146d56ad7c374e9cd72cd16e7c74e657a0f/typing_extensions-3.7.4.2-py3-none-any.whl",
-                    "sha256": "6e95524d8a547a91e08f404ae485bbb71962de46967e1b71a0cb89af24e761c5"
-                },
-                {
-                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/05/54/3324b0c46340c31b909fcec598696aaec7ddc8c18a63f2db352562d3354c/cffi-1.14.0.tar.gz",
                     "sha256": "2d384f4a127a15ba701207f7639d94106693b6cd64173d6c8988e2c25f3ac2b6"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e9/93/4860cebd5ad3ff2664ad3c966490ccb46e3b88458b2095145bca11727ca4/setuptools-47.3.1-py3-none-any.whl",
-                    "sha256": "4ba6f9789ea243a6b8ba57da81f75a53494456117810436fd9277a74d1c915d1"
+                    "url": "https://files.pythonhosted.org/packages/0c/0e/3f026d0645d699e7320b59952146d56ad7c374e9cd72cd16e7c74e657a0f/typing_extensions-3.7.4.2-py3-none-any.whl",
+                    "sha256": "6e95524d8a547a91e08f404ae485bbb71962de46967e1b71a0cb89af24e761c5"
                 },
                 {
                     "type": "file",
@@ -362,18 +327,23 @@
                 },
                 {
                     "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/63/fc/ae9d5eeb231727ba7a01eb9110d17c992e0e4b24deab6a05b147ea8192d7/bitbox02-4.0.0.tar.gz",
+                    "sha256": "fce1b438a4837fd164ce208929f0f5c452a4fdcc858d629872ce7a3984d5e9fc"
+                },
+                {
+                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/ab/e7/8001b5fc971078a15f57cb56e15b699cb0c0f43b1dffaa2fae39961d80da/protobuf-3.12.2.tar.gz",
                     "sha256": "49ef8ab4c27812a89a76fa894fe7a08f42f2147078392c0dee51d4a444ef6df5"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b8/11/4b4d30e4746584684c758d8f1ddc1fa5ab1470b6bf70bce4d9b235965e99/ecdsa-0.15-py2.py3-none-any.whl",
-                    "sha256": "867ec9cf6df0b03addc8ef66b56359643cb5d0c1dc329df76ba7ecfe256c8061"
+                    "url": "https://files.pythonhosted.org/packages/ae/e7/d9c3a176ca4b02024debf82342dab36efadfc5776f9c8db077e8f6e71821/pycparser-2.20-py2.py3-none-any.whl",
+                    "sha256": "7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ae/e7/d9c3a176ca4b02024debf82342dab36efadfc5776f9c8db077e8f6e71821/pycparser-2.20-py2.py3-none-any.whl",
-                    "sha256": "7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705"
+                    "url": "https://files.pythonhosted.org/packages/b8/11/4b4d30e4746584684c758d8f1ddc1fa5ab1470b6bf70bce4d9b235965e99/ecdsa-0.15-py2.py3-none-any.whl",
+                    "sha256": "867ec9cf6df0b03addc8ef66b56359643cb5d0c1dc329df76ba7ecfe256c8061"
                 },
                 {
                     "type": "file",
@@ -392,11 +362,6 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/95/fe/2687907be1d6291a84a9b51220595a4f89d9477032c57f21e7c633465540/setuptools-47.3.1.zip",
-                    "sha256": "843037738d1e34e8b326b5e061f474aca6ef9d7ece41329afbc8aac6195a3920"
-                },
-                {
-                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/3c/03/58572025c77b9e6027155b272a1b96298e711cd4f95c24967f7137ab0c4b/base58-2.0.1-py3-none-any.whl",
                     "sha256": "447adc750d6b642987ffc6d397ecd15a799852d5f6a1d308d384500243825058"
                 },
@@ -404,11 +369,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl",
                     "sha256": "8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f8/88/2caef4a43a04b1985955808bca0da8e0460c409a1db0393305ec86ce2cb7/bitbox02-3.0.0-py3-none-any.whl",
-                    "sha256": "3fb5b2fc4edf8b1d43a2d08991ef862f9e93444106e9bf42bf8dff169a42ad23"
                 },
                 {
                     "type": "file",
@@ -436,18 +396,13 @@
             "name": "python3-hidapi",
             "buildsystem": "simple",
             "build-commands": [
-                "env C_INCLUDE_PATH=/app/include/libusb-1.0 pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} hidapi"
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} hidapi"
             ],
             "sources": [
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/ee/e9/b2ec08690c280a0eaa4777bf829db6b5d269903d4e8e9ce82f079c837d5a/hidapi-0.9.0.post3.tar.gz",
                     "sha256": "5a2442928f17ba742d9c53073f48b152051c5747d758d2fefd937543da5ab2e5"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e9/93/4860cebd5ad3ff2664ad3c966490ccb46e3b88458b2095145bca11727ca4/setuptools-47.3.1-py3-none-any.whl",
-                    "sha256": "4ba6f9789ea243a6b8ba57da81f75a53494456117810436fd9277a74d1c915d1"
                 }
             ]
         }

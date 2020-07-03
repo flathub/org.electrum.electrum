@@ -20,7 +20,7 @@
     "modules": [
         "shared-modules/libusb/libusb.json",
         "libsecp256k1.json",
-        "python3-requirements-bin.json",
+        "python3-requirements-binaries.json",
         "python3-requirements.json",
         "python3-requirements-hw.json",
         {
@@ -36,10 +36,9 @@
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/spesmilo/electrum.git",
-                    "commit": "2db0ad10db7ae2a55900d06c3f788d01507d678e",
-                    "tag": "4.0.0b1"
+                    "type": "archive",
+                    "url": "https://github.com/spesmilo/electrum/archive/4.0.1.tar.gz",
+                    "sha256": "cffa3ea7108578be3f12cd4b03efcd2319485e7ac7584ecd1b26c10ad5deed87"
                 },
                 {
                     "type": "patch",

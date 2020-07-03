@@ -1,5 +1,5 @@
 {
-    "name": "requirements-bin",
+    "name": "python3-requirements-binaries",
     "buildsystem": "simple",
     "build-commands": [],
     "modules": [
