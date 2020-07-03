@@ -7,7 +7,7 @@ Flatpak build of [electrum](https://electrum.org/#home).
 The `python3-requirements*` files are built
 using
 [these](https://github.com/spesmilo/electrum/tree/master/contrib/requirements)
-requirements files
+requirements files,
 and `flatpak-pip-generator` from
 [flatpak-builder-tools](https://github.com/flatpak/flatpak-builder-tools/), with
 a few modifications.
