@@ -28,7 +28,7 @@
             "buildsystem": "simple",
             "build-commands": [
                 "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[full]",
-                "install -Dp -m 644 org.electrum.electrum.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml",
+                "install -Dp -m 644 org.electrum.electrum.appdata.xml /app/share/metainfo/${FLATPAK_ID}.appdata.xml",
                 "install -Dp -m 644 electrum/gui/icons/electrum.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png",
                 "install -Dp -m 644 electrum.desktop /app/share/applications/${FLATPAK_ID}.desktop",
                 "desktop-file-edit --set-key=\"Icon\" --set-value=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop",
@@ -37,8 +37,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/spesmilo/electrum/archive/4.0.1.tar.gz",
-                    "sha256": "cffa3ea7108578be3f12cd4b03efcd2319485e7ac7584ecd1b26c10ad5deed87"
+                    "url": "https://github.com/spesmilo/electrum/archive/4.0.2.tar.gz",
+                    "sha256": "659a1454b8b5fba230e60b4957c18de0d39568d8b7d0fc3754ec716159040f67"
                 },
                 {
                     "type": "patch",
@@ -46,7 +46,7 @@
                 },
                 {
                     "type": "file",
-                    "path": "org.electrum.electrum.metainfo.xml"
+                    "path": "org.electrum.electrum.appdata.xml"
                 }
             ]
         }
