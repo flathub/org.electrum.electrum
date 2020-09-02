@@ -25,20 +25,24 @@
                     "sha256": "0a34b6596bdd28d52da3a51fa8d9bb0b287bcb605c2512aa3251b9028cc71f4d"
                 }
             ],
-            "modules": [{
-                "name": "sip",
-                "buildsystem": "simple",
-                "build-commands": [
-                    "python3 configure.py --sip-module PyQt5.sip -b ${FLATPAK_DEST}/bin -d ${FLATPAK_DEST}/lib/python3.7/site-packages -e ${FLATPAK_DEST}/include -v ${FLATPAK_DEST}/share/sip --stubsdir=${FLATPAK_DEST}/lib/python3.7/site-packages",
-                    "make -j $FLATPAK_BUILDER_N_JOBS",
-                    "make install"
-                ],
-                "sources": [{
-                    "type": "archive",
-                    "url" : "https://www.riverbankcomputing.com/static/Downloads/sip/4.19.23/sip-4.19.23.tar.gz",
-                    "sha256" : "22ca9bcec5388114e40d4aafd7ccd0c4fe072297b628d0c5cdfa2f010c0bc7e7"
-                }]
-            }]
+            "modules": [
+                {
+                    "name": "sip",
+                    "buildsystem": "simple",
+                    "build-commands": [
+                        "python3 configure.py --sip-module PyQt5.sip -b ${FLATPAK_DEST}/bin -d ${FLATPAK_DEST}/lib/python3.7/site-packages -e ${FLATPAK_DEST}/include -v ${FLATPAK_DEST}/share/sip --stubsdir=${FLATPAK_DEST}/lib/python3.7/site-packages",
+                        "make -j $FLATPAK_BUILDER_N_JOBS",
+                        "make install"
+                    ],
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://www.riverbankcomputing.com/static/Downloads/sip/4.19.24/sip-4.19.24.tar.gz",
+                            "sha256": "edcd3790bb01938191eef0f6117de0bf56d1136626c0ddb678f3a558d62e41e5"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "python3-PyQt5-sip",
