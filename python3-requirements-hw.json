@@ -4,20 +4,6 @@
     "build-commands": [],
     "modules": [
         {
-            "name": "python3-Cython",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"Cython==0.29.20\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/1e/2a/fcb9cf3620a758bc7a1bd4a02eb00722661a658bf9de053894c4dc77596c/Cython-0.29.20-py2.py3-none-any.whl",
-                    "sha256": "b56c02f14f1708411d95679962b742a1235d33a23535ce4a7f75425447701245"
-                }
-            ]
-        },
-        {
             "name": "python3-base58",
             "buildsystem": "simple",
             "build-commands": [
