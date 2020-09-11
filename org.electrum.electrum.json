@@ -18,6 +18,11 @@
         /* Network acess. */
         "--share=network"
     ],
+    "cleanup": [
+        "/include",
+        "/lib/debug",
+        "/share/man/man1"
+    ],
     "modules": [
         "shared-modules/libusb/libusb.json",
         "libsecp256k1.json",
@@ -29,7 +34,7 @@
             "buildsystem": "simple",
             "build-commands": [
                 "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[full]",
-                "install -Dp -m 644 org.electrum.electrum.appdata.xml /app/share/metainfo/${FLATPAK_ID}.appdata.xml",
+                "install -Dp -m 644 org.electrum.electrum.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml",
                 "install -Dp -m 644 electrum/gui/icons/electrum.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png",
                 "install -Dp -m 644 electrum.desktop /app/share/applications/${FLATPAK_ID}.desktop",
                 "desktop-file-edit --set-key=\"Icon\" --set-value=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop",
@@ -38,8 +43,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/spesmilo/electrum/archive/4.0.2.tar.gz",
-                    "sha256": "659a1454b8b5fba230e60b4957c18de0d39568d8b7d0fc3754ec716159040f67"
+                    "url": "https://github.com/spesmilo/electrum/archive/4.0.3.tar.gz",
+                    "sha256": "266df60579a3f9b720eee3d85f3c9b468e8da8140822f22f952a67c6ceaa82f5"
                 },
                 {
                     "type": "patch",
@@ -47,7 +52,7 @@
                 },
                 {
                     "type": "file",
-                    "path": "org.electrum.electrum.appdata.xml"
+                    "path": "org.electrum.electrum.metainfo.xml"
                 }
             ]
         }
