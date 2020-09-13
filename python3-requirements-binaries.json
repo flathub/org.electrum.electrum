@@ -4,6 +4,69 @@
     "build-commands": [],
     "modules": [
         {
+            "name": "python3-cffi",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"cffi==1.14.2\""
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/ae/e7/d9c3a176ca4b02024debf82342dab36efadfc5776f9c8db077e8f6e71821/pycparser-2.20-py2.py3-none-any.whl",
+                    "sha256": "7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/f7/09/88bbe20b76ca76be052c366fe77aa5e3cd6e5f932766e5597fecdd95b2a8/cffi-1.14.2.tar.gz",
+                    "sha256": "ae8f34d50af2c2154035984b8b5fc5d9ed63f32fe615646ab435b05b132ca91b"
+                }
+            ]
+        },
+        {
+            "name": "python3-cryptography",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"cryptography==3.1\""
+            ],
+            "sources": [
+                "python3-setuptools.json",
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/ae/e7/d9c3a176ca4b02024debf82342dab36efadfc5776f9c8db077e8f6e71821/pycparser-2.20-py2.py3-none-any.whl",
+                    "sha256": "7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl",
+                    "sha256": "8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/f7/09/88bbe20b76ca76be052c366fe77aa5e3cd6e5f932766e5597fecdd95b2a8/cffi-1.14.2.tar.gz",
+                    "sha256": "ae8f34d50af2c2154035984b8b5fc5d9ed63f32fe615646ab435b05b132ca91b"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/12/be/c9cc7d7ab71dbcc9e4e517ead0cdd48e8c9a48d7b8bdddb738e90d08279a/cryptography-3.1.tar.gz",
+                    "sha256": "26409a473cc6278e4c90f782cd5968ebad04d3911ed1c402fc86908c17633e08"
+                }
+            ]
+        },
+        {
+            "name": "python3-pycparser",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pycparser==2.20\""
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/ae/e7/d9c3a176ca4b02024debf82342dab36efadfc5776f9c8db077e8f6e71821/pycparser-2.20-py2.py3-none-any.whl",
+                    "sha256": "7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705"
+                }
+            ]
+        },
+        {
             "name": "PyQt5",
             "cleanup": ["/bin/sip", "/include", "/lib/python3.8/site-packages/*.pyi"],
             "config-opts": ["--disable-static", "--enable-x11"],
@@ -16,8 +79,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/8c/90/82c62bbbadcca98e8c6fa84f1a638de1ed1c89e85368241e9cc43fcbc320/PyQt5-5.15.0.tar.gz",
-                    "sha256": "c6f75488ffd5365a65893bc64ea82a6957db126fbfe33654bcd43ae1c30c52f9"
+                    "url": "https://files.pythonhosted.org/packages/1d/31/896dc3dfb6c81c70164019a6cbba6ab037e3af7653d9ca60ccc874ee4c27/PyQt5-5.15.1.tar.gz",
+                    "sha256": "d9a76b850246d08da9863189ecb98f6c2aa9b4d97a3e85e29330a264aed0f9a1"
                 },
                 {
                     "type": "archive",
@@ -41,20 +104,6 @@
                             "sha256": "edcd3790bb01938191eef0f6117de0bf56d1136626c0ddb678f3a558d62e41e5"
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "python3-pycryptodomex",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pycryptodomex==3.9.7\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/7f/3c/80cfaec41c3a9d0f524fe29bca9ab22d02ac84b5bfd6e22ade97d405bdba/pycryptodomex-3.9.7.tar.gz",
-                    "sha256": "50163324834edd0c9ce3e4512ded3e221c969086e10fdd5d3fdcaadac5e24a78"
                 }
             ]
         }
