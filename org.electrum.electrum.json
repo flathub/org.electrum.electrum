@@ -26,6 +26,34 @@
     "modules": [
         "shared-modules/libusb/libusb.json",
         "libsecp256k1.json",
+        {
+            "name": "libzbar",
+            "buildsystem": "autotools",
+            "config-opts": [
+                "--without-java",
+                "--without-gtk",
+                "--without-npapi",
+                "--without-xshm",
+                "--without-xv",
+                "--disable-video",
+                "--without-dbus",
+                "--without-imagemagick"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.linuxtv.org/zbar.git",
+                    "tar": "0.23.1"
+                },
+                {
+                    "type": "script",
+                    "path": "autogen.sh",
+                    "commands": [
+                        "autoreconf -vfi -W none"
+                    ]
+                }
+            ]
+        },
         "python3-requirements-binaries.json",
         "python3-requirements.json",
         "python3-requirements-hw.json",
