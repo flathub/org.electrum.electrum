@@ -71,8 +71,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/spesmilo/electrum/archive/4.0.5.tar.gz",
-                    "sha256": "0ef9ef52db8199aca6592db1d382aeb001d7d42d1d7de45d950e03f46a933690",
+                    "url": "https://download.electrum.org/4.0.6/Electrum-4.0.6.tar.gz",
+                    "sha256": "4d90047060aaa717184e7c32b538ebf74948b6e00ab6260ab4388f07c4b9e86a",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://download.electrum.org/",
