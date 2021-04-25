@@ -5,9 +5,9 @@
     "runtime-version": "5.15",
     "command": "electrum",
     "finish-args": [
-        /* Xorg and Wayland support */
-        "--socket=wayland",
-        "--socket=fallback-x11",
+        /* Xorg support */
+        "--socket=x11",
+        "--env=QT_QPA_PLATFORM=xcb",
         /* Sound */
         "--socket=pulseaudio",
         /* Persistent storage */
