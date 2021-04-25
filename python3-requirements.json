@@ -7,10 +7,15 @@
             "name": "python3-aiohttp",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"aiohttp==3.6.3\""
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"aiohttp==3.7.4.post0\""
             ],
             "sources": [
                 "python3-setuptools.json",
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl",
+                    "sha256": "7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918"
+                },
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/a2/38/928ddce2273eaa564f6f50de919327bf3a00f091b5baba8dfa9460f3a8a8/idna-2.10-py2.py3-none-any.whl",
@@ -43,8 +48,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9d/6c/429faa2d2f73973189ca0cfe141ff703417a5eebe18d78e6b25b70db0a34/aiohttp-3.6.3.tar.gz",
-                    "sha256": "698cd7bc3c7d1b82bb728bae835724a486a8c376647aec336aa21a60113c3645"
+                    "url": "https://files.pythonhosted.org/packages/99/f5/90ede947a3ce2d6de1614799f5fea4e93c19b6520a59dc5d2f64123b032f/aiohttp-3.7.4.post0.tar.gz",
+                    "sha256": "493d3299ebe5f5a7c66b9819eacdcfbbaaf1a8e84911ddffcdc48888497afecf"
                 }
             ]
         },
@@ -52,7 +57,7 @@
             "name": "python3-aiohttp-socks",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"aiohttp-socks==0.5.5\""
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"aiohttp-socks==0.6.0\""
             ],
             "sources": [
                 {
@@ -82,13 +87,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ac/7e/d16155d2662ee91bf3b2d548ba72e41c50a2a5870e090abe99fbe77797a2/python_socks-1.1.0-py3-none-any.whl",
-                    "sha256": "29cb93787447a239bc1e9c8621c1d8cff9cfebcfc1653685c4fb3a2da74592dc"
+                    "url": "https://files.pythonhosted.org/packages/e4/d0/6d56fcaca0f44cbcbc8ab3169a17cd90696382a812506fc7041323567d2b/python_socks-1.2.4-py3-none-any.whl",
+                    "sha256": "9f12e8fe78629b87543fad0e4ea0ccf103a4fad6a7872c5d0ecb36d9903fa548"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9d/6c/429faa2d2f73973189ca0cfe141ff703417a5eebe18d78e6b25b70db0a34/aiohttp-3.6.3.tar.gz",
-                    "sha256": "698cd7bc3c7d1b82bb728bae835724a486a8c376647aec336aa21a60113c3645"
+                    "url": "https://files.pythonhosted.org/packages/99/f5/90ede947a3ce2d6de1614799f5fea4e93c19b6520a59dc5d2f64123b032f/aiohttp-3.7.4.post0.tar.gz",
+                    "sha256": "493d3299ebe5f5a7c66b9819eacdcfbbaaf1a8e84911ddffcdc48888497afecf"
                 },
                 {
                     "type": "file",
@@ -97,8 +102,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/14/11/67750d2d6ba48eae602392b55513441058a2a004e5271276df03d3ed6393/aiohttp_socks-0.5.5-py3-none-any.whl",
-                    "sha256": "faaa25ed4dc34440ca888d23e089420f3b1918dc4ecf062c3fd9474827ad6a39"
+                    "url": "https://files.pythonhosted.org/packages/9a/6c/d302e5a8097fee1e83b9f8e9da10d7752fbf27c74db18b3cc9528b3479be/aiohttp_socks-0.6.0-py3-none-any.whl",
+                    "sha256": "db7aa48c0758ee45d7dbc1fde499912ec6fb77eab77a6e2808825d1f41d4e300"
                 }
             ]
         },
@@ -106,13 +111,13 @@
             "name": "python3-aiorpcX",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"aiorpcX==0.18.4\""
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"aiorpcX==0.18.7\""
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a2/54/26ad6cb69db80f8b710027ae34388b2c2d087583425cc6315166357c2d12/aiorpcX-0.18.4-py3-none-any.whl",
-                    "sha256": "d424a55bcf52ebf1b3610a7809c0748fac91ce926854ad33ce952463bc6017e8"
+                    "url": "https://files.pythonhosted.org/packages/e7/92/eb92bf3e5ff1df569b99db96fc0b935e71d0aa34445618c822654e92437c/aiorpcX-0.18.7-py3-none-any.whl",
+                    "sha256": "7fa48423e1c06cd0ffb7b60f2cca7e819b6cbbf57d4bc8a82944994ef5038f05"
                 }
             ]
         },
@@ -134,13 +139,13 @@
             "name": "python3-attrs",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"attrs==20.2.0\""
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"attrs==20.3.0\""
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/14/df/479736ae1ef59842f512548bacefad1abed705e400212acba43f9b0fa556/attrs-20.2.0-py2.py3-none-any.whl",
-                    "sha256": "fce7fc47dfc976152e82d53ff92fa0407700c21acd20886a13777a0d20e655dc"
+                    "url": "https://files.pythonhosted.org/packages/c3/aa/cb45262569fcc047bf070b5de61813724d6726db83259222cd7b4c79821a/attrs-20.3.0-py2.py3-none-any.whl",
+                    "sha256": "31b2eced602aa8423c2aea9c76a724617ed67cf9513173fd3a4f03e3a929c7e6"
                 }
             ]
         },
@@ -162,13 +167,13 @@
             "name": "python3-certifi",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"certifi==2020.6.20\""
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"certifi==2020.12.5\""
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5e/c4/6c4fe722df5343c33226f0b4e0bb042e4dc13483228b4718baf286f86d87/certifi-2020.6.20-py2.py3-none-any.whl",
-                    "sha256": "8fc0819f1f30ba15bdb34cceffb9ef04d99f420f68eb75d901e9560b8749fc41"
+                    "url": "https://files.pythonhosted.org/packages/5e/a0/5f06e1e1d463903cf0c0eebeb751791119ed7a4b3737fdc9a77f1cdfb51f/certifi-2020.12.5-py2.py3-none-any.whl",
+                    "sha256": "719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"
                 }
             ]
         },
@@ -176,13 +181,13 @@
             "name": "python3-chardet",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"chardet==3.0.4\""
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"chardet==4.0.0\""
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl",
-                    "sha256": "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"
+                    "url": "https://files.pythonhosted.org/packages/19/c7/fa589626997dd07bd87d9269342ccb74b1720384a4d739a1872bd84fbe68/chardet-4.0.0-py2.py3-none-any.whl",
+                    "sha256": "f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5"
                 }
             ]
         },
@@ -327,13 +332,13 @@
             "name": "python3-python-socks",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-socks==1.1.0\""
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-socks==1.2.4\""
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ac/7e/d16155d2662ee91bf3b2d548ba72e41c50a2a5870e090abe99fbe77797a2/python_socks-1.1.0-py3-none-any.whl",
-                    "sha256": "29cb93787447a239bc1e9c8621c1d8cff9cfebcfc1653685c4fb3a2da74592dc"
+                    "url": "https://files.pythonhosted.org/packages/e4/d0/6d56fcaca0f44cbcbc8ab3169a17cd90696382a812506fc7041323567d2b/python_socks-1.2.4-py3-none-any.whl",
+                    "sha256": "9f12e8fe78629b87543fad0e4ea0ccf103a4fad6a7872c5d0ecb36d9903fa548"
                 }
             ]
         },
@@ -391,20 +396,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/cd/fd/9972948f02e967b691cc0ca1f26124826a3b88cb38f412a8b7935b8c3c72/QtPy-1.9.0-py2.py3-none-any.whl",
                     "sha256": "fa0b8363b363e89b2a6f49eddc162a04c0699ae95e109a6be3bb145a913190ea"
-                }
-            ]
-        },
-        {
-            "name": "python3-typing-extensions",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"typing-extensions==3.7.4.3\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl",
-                    "sha256": "7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918"
                 }
             ]
         },
