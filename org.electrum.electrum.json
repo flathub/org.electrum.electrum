@@ -77,10 +77,10 @@
                     "url": "https://download.electrum.org/4.1.5/Electrum-4.1.5.tar.gz",
                     "sha256": "91472e281f604a7a687faa4b339bf5e484bd2bec82a495ea45bfa014e52719a1",
                     "x-checker-data": {
-                        "type": "html",
-                        "url": "https://download.electrum.org/",
-                        "version-pattern": "([\d+.]+\d+)",
-                        "url-template": "https://github.com/spesmilo/electrum/archive/$version.tar.gz"
+                        "type": "anitya",
+                        "project-id": 10602,
+                        "version-pattern": "^([\\d.]+)$",
+                        "url-template": "https://download.electrum.org/$version/Electrum-$version.tar.gz"
                     }
                 },
                 {
