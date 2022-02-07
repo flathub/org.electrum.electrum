@@ -27,35 +27,38 @@
         "shared-modules/libusb/libusb.json",
         "libsecp256k1.json",
         {
-          "name": "zbar",
-          "config-opts": [
-            "--without-qt",
-            "--without-qt5",
-            "--without-gtk",
-            "--without-xv",
-            "--without-imagemagick",
-            "--without-dbus",
-            "--without-java",
-            "--without-npapi",
-            "--without-xshm",
-            "--with-python=python3",
-            "--disable-doc",
-            "--enable-codes=qrcode"
-          ],
-          "sources": [
-            {
-              "type": "git",
-              "url": "https://git.linuxtv.org/zbar.git",
-              "tag": "0.23.1"
-            },
-            {
-              "type": "script",
-              "dest-filename": "autogen.sh",
-              "commands": [
-                "autoreconf -vfi -W none"
-              ]
-            }
-          ]
+            "name": "zbar",
+            "config-opts": [
+                "--without-qt",
+                "--without-qt5",
+                "--without-gtk",
+                "--without-xv",
+                "--without-imagemagick",
+                "--without-dbus",
+                "--disable-video",
+                "--without-java",
+                "--with-python=python3",
+                "--with-doc=no",
+                "--without-npapi",
+                "--without-xshm",
+                "--with-python_prefix=\"${FLATPAK_DEST}\"",
+                "--with-python_exe_prefix=\"${FLATPAK_DEST}\"",
+                "--enable-codes=qrcode"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://git.linuxtv.org/zbar.git",
+                    "commit": "aac86d5f08d64ab4c3da78188eb622fa3cb07182"
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "autogen.sh",
+                    "commands": [
+                        "autoreconf -vfi -W none"
+                    ]
+                }
+            ]
         },
         "python3-requirements-binaries.json",
         "python3-requirements.json",
