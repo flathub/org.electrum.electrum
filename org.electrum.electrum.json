@@ -2,7 +2,7 @@
     "id": "org.electrum.electrum",
     "sdk": "org.kde.Sdk",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15",
+    "runtime-version": "5.15-21.08",
     "command": "electrum",
     "finish-args": [
         /* Xorg support */
@@ -27,35 +27,38 @@
         "shared-modules/libusb/libusb.json",
         "libsecp256k1.json",
         {
-          "name": "zbar",
-          "config-opts": [
-            "--without-qt",
-            "--without-qt5",
-            "--without-gtk",
-            "--without-xv",
-            "--without-imagemagick",
-            "--without-dbus",
-            "--without-java",
-            "--without-npapi",
-            "--without-xshm",
-            "--with-python=python3",
-            "--disable-doc",
-            "--enable-codes=qrcode"
-          ],
-          "sources": [
-            {
-              "type": "git",
-              "url": "https://git.linuxtv.org/zbar.git",
-              "tag": "0.23.1"
-            },
-            {
-              "type": "script",
-              "dest-filename": "autogen.sh",
-              "commands": [
-                "autoreconf -vfi -W none"
-              ]
-            }
-          ]
+            "name": "zbar",
+            "config-opts": [
+                "--without-qt",
+                "--without-qt5",
+                "--without-gtk",
+                "--without-xv",
+                "--without-imagemagick",
+                "--without-dbus",
+                "--disable-video",
+                "--without-java",
+                "--with-python=python3",
+                "--with-doc=no",
+                "--without-npapi",
+                "--without-xshm",
+                "--with-python_prefix=\"${FLATPAK_DEST}\"",
+                "--with-python_exe_prefix=\"${FLATPAK_DEST}\"",
+                "--enable-codes=qrcode"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://git.linuxtv.org/zbar.git",
+                    "commit": "aac86d5f08d64ab4c3da78188eb622fa3cb07182"
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "autogen.sh",
+                    "commands": [
+                        "autoreconf -vfi -W none"
+                    ]
+                }
+            ]
         },
         "python3-requirements-binaries.json",
         "python3-requirements.json",
@@ -77,10 +80,10 @@
                     "url": "https://download.electrum.org/4.1.5/Electrum-4.1.5.tar.gz",
                     "sha256": "91472e281f604a7a687faa4b339bf5e484bd2bec82a495ea45bfa014e52719a1",
                     "x-checker-data": {
-                        "type": "html",
-                        "url": "https://download.electrum.org/",
-                        "version-pattern": "([\d+.]+\d+)",
-                        "url-template": "https://github.com/spesmilo/electrum/archive/$version.tar.gz"
+                        "type": "anitya",
+                        "project-id": 10602,
+                        "version-pattern": "^([\\d.]+)$",
+                        "url-template": "https://download.electrum.org/$version/Electrum-$version.tar.gz"
                     }
                 },
                 {
