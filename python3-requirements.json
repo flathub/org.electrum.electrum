@@ -111,13 +111,13 @@
             "name": "python3-aiorpcX",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"aiorpcX==0.18.7\""
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"aiorpcX==0.22.1\""
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e7/92/eb92bf3e5ff1df569b99db96fc0b935e71d0aa34445618c822654e92437c/aiorpcX-0.18.7-py3-none-any.whl",
-                    "sha256": "7fa48423e1c06cd0ffb7b60f2cca7e819b6cbbf57d4bc8a82944994ef5038f05"
+                    "url": "https://files.pythonhosted.org/packages/eb/4f/ba4e6c6ae59f6820c676fc00ed4ea45ae224d0a722fd07b8140e403ac7cb/aiorpcX-0.22.1-py3-none-any.whl",
+                    "sha256": "e74f9fbed3fd21598e71fe05066618fc2c06feec504fe29490ddda05fdbdde62"
                 }
             ]
         },
@@ -209,7 +209,7 @@
             "name": "python3-ecdsa",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ecdsa==0.16.0\""
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ecdsa==0.16.1\""
             ],
             "sources": [
                 {
@@ -219,8 +219,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5d/8b/c6ea939f70b3356e10e771a8d5ef27fd8ecc74d9e49ec8116d94f83b9673/ecdsa-0.16.0-py2.py3-none-any.whl",
-                    "sha256": "ca359c971594dceebf334f3d623dae43163ab161c7d09f28cae70a86df26eb7a"
+                    "url": "https://files.pythonhosted.org/packages/98/16/70be2716e24eaf5d81074bb3c05429d60292c2a96613a78ac3d69526ad2a/ecdsa-0.16.1-py2.py3-none-any.whl",
+                    "sha256": "881fa5e12bb992972d3d1b3d4dfbe149ab76a89f13da02daa5ea1ec7dea6e747"
                 }
             ]
         },
@@ -308,7 +308,7 @@
             "name": "python3-protobuf",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"protobuf==3.13.0\""
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"protobuf==3.15.6\""
             ],
             "sources": [
                 {
@@ -323,8 +323,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/25/ef/8f36bc7e4c3dcad241a9e7a51520d30712a7abc034343bed841ff4ea3289/protobuf-3.13.0.tar.gz",
-                    "sha256": "6a82e0c8bb2bf58f606040cc5814e07715b2094caeba281e2e7d0b0e2e397db5"
+                    "url": "https://files.pythonhosted.org/packages/c5/82/cee5dcde1c7a0ffe1336946a117d31b1a394558fcf4d8ca3fba720a47f80/protobuf-3.15.6.tar.gz",
+                    "sha256": "2b974519a2ae83aa1e31cff9018c70bbe0e303a46a598f982943c49ae1d4fcd3"
                 }
             ]
         },
