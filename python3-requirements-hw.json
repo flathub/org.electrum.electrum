@@ -18,10 +18,24 @@
             ]
         },
         {
+            "name": "python3-typing-extensions",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"typing-extensions==4.1.1\""
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/45/6b/44f7f8f1e110027cf88956b59f2fad776cca7e1704396d043f89effd3a0e/typing_extensions-4.1.1-py3-none-any.whl",
+                    "sha256": "21c85e0fe4b9a155d0799430b0ad741cdce7e359660ccbd8b530613e8df88ce2"
+                }
+            ]
+        },
+        {
             "name": "python3-bitbox02",
             "buildsystem": "simple",
             "build-commands": [
-                "env C_INCLUDE_PATH=/app/include/libusb-1.0 pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"bitbox02==5.3.0\""
+                "env C_INCLUDE_PATH=/app/include/libusb-1.0 pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"bitbox02==6.0.0\""
             ],
             "sources": [
                 {
@@ -36,11 +50,6 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl",
-                    "sha256": "7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918"
-                },
-                {
-                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl",
                     "sha256": "8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
                 },
@@ -48,11 +57,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/0b/70/b84f9944a03964a88031ef6ac219b6c91e8ba2f373362329d8770ef36f02/semver-2.13.0-py2.py3-none-any.whl",
                     "sha256": "ced8b23dceb22134307c1b8abfa523da14198793d9787ac838e70e29e77458d4"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c5/82/cee5dcde1c7a0ffe1336946a117d31b1a394558fcf4d8ca3fba720a47f80/protobuf-3.15.6.tar.gz",
-                    "sha256": "2b974519a2ae83aa1e31cff9018c70bbe0e303a46a598f982943c49ae1d4fcd3"
                 },
                 {
                     "type": "file",
@@ -86,8 +90,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/14/75/a1a2ac59e4ec962aaaef8b527a5efe5d1363103e70b98db282212dcc1916/bitbox02-5.3.0-py3-none-any.whl",
-                    "sha256": "797e6904d431f6d2ef711f169e7ce8fffc125cc8c5b3efb8187fd451f45635e1"
+                    "url": "https://files.pythonhosted.org/packages/7a/8c/c84c6a168764cf39145f41e7e901f2b8108eb1663c2ab4eb0a40cdafbdc4/bitbox02-6.0.0.tar.gz",
+                    "sha256": "c136ad7a1ddd272705368ccb6906c0cd71746afaf6a1f05d8e5aaa70e04baffd"
                 }
             ]
         },
@@ -261,25 +265,6 @@
             ]
         },
         {
-            "name": "python3-ecdsa",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ecdsa==0.16.1\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl",
-                    "sha256": "8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/98/16/70be2716e24eaf5d81074bb3c05429d60292c2a96613a78ac3d69526ad2a/ecdsa-0.16.1-py2.py3-none-any.whl",
-                    "sha256": "881fa5e12bb992972d3d1b3d4dfbe149ab76a89f13da02daa5ea1ec7dea6e747"
-                }
-            ]
-        },
-        {
             "name": "python3-hidapi",
             "buildsystem": "simple",
             "build-commands": [
@@ -313,6 +298,20 @@
             ]
         },
         {
+            "name": "python3-mnemonic",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"mnemonic==0.20\""
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/ae/95/3e07c33ffb26f5823b45a1c30db8acea44763198c2bd393e07e884f3295f/mnemonic-0.20-py3-none-any.whl",
+                    "sha256": "acd2168872d0379e7a10873bb3e12bf6c91b35de758135c4fbd1015ef18fafc5"
+                }
+            ]
+        },
+        {
             "name": "python3-keepkey",
             "buildsystem": "simple",
             "build-commands": [
@@ -328,16 +327,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl",
                     "sha256": "8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c5/82/cee5dcde1c7a0ffe1336946a117d31b1a394558fcf4d8ca3fba720a47f80/protobuf-3.15.6.tar.gz",
-                    "sha256": "2b974519a2ae83aa1e31cff9018c70bbe0e303a46a598f982943c49ae1d4fcd3"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6b/cd/db2d853ec8d6d2b020b3647c062583c297070ac071f6a9ba0473141a6a1e/mnemonic-0.19-py2.py3-none-any.whl",
-                    "sha256": "a8d78c5100acfa7df9bab6b9db7390831b0e54490934b718ff9efd68f0d731a6"
                 },
                 {
                     "type": "file",
@@ -376,20 +365,6 @@
             ]
         },
         {
-            "name": "python3-mnemonic",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"mnemonic==0.19\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6b/cd/db2d853ec8d6d2b020b3647c062583c297070ac071f6a9ba0473141a6a1e/mnemonic-0.19-py2.py3-none-any.whl",
-                    "sha256": "a8d78c5100acfa7df9bab6b9db7390831b0e54490934b718ff9efd68f0d731a6"
-                }
-            ]
-        },
-        {
             "name": "python3-noiseprotocol",
             "buildsystem": "simple",
             "build-commands": [
@@ -415,25 +390,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/9d/e1/76e4694201d67b93a6f1644b2588b4a3d965419fe189416e3496cf415db5/noiseprotocol-0.3.1-py3-none-any.whl",
                     "sha256": "2e1a603a38439636cf0ffd8b3e8b12cee27d368a28b41be7dbe568b2abb23111"
-                }
-            ]
-        },
-        {
-            "name": "python3-protobuf",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"protobuf==3.15.6\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl",
-                    "sha256": "8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c5/82/cee5dcde1c7a0ffe1336946a117d31b1a394558fcf4d8ca3fba720a47f80/protobuf-3.15.6.tar.gz",
-                    "sha256": "2b974519a2ae83aa1e31cff9018c70bbe0e303a46a598f982943c49ae1d4fcd3"
                 }
             ]
         },
@@ -543,11 +499,6 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6b/cd/db2d853ec8d6d2b020b3647c062583c297070ac071f6a9ba0473141a6a1e/mnemonic-0.19-py2.py3-none-any.whl",
-                    "sha256": "a8d78c5100acfa7df9bab6b9db7390831b0e54490934b718ff9efd68f0d731a6"
-                },
-                {
-                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/14/bd/29515a44719569aa0942551571d89539a1c0633eb78a6d695b462145827f/libusb1-1.9.2-py3-none-any.whl",
                     "sha256": "c3dd4df43b5c38f65bf599413810d021f5f98396c4b6f66765fb98193aca11b0"
                 },
@@ -591,7 +542,7 @@
             "name": "python3-trezor",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"trezor==0.12.2\""
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"trezor==0.13.0\""
             ],
             "sources": [
                 {
@@ -603,11 +554,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/23/fc/8a49991f7905261f9ca9df5aa9b58363c3c821ce3e7f671895442b7100f2/urllib3-1.26.3-py2.py3-none-any.whl",
                     "sha256": "1b465e494e3e0d8939b50680403e3aedaa2bc434b7d5af64dfd3c958d7f5ae80"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl",
-                    "sha256": "7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918"
                 },
                 {
                     "type": "file",
@@ -636,11 +582,6 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6b/cd/db2d853ec8d6d2b020b3647c062583c297070ac071f6a9ba0473141a6a1e/mnemonic-0.19-py2.py3-none-any.whl",
-                    "sha256": "a8d78c5100acfa7df9bab6b9db7390831b0e54490934b718ff9efd68f0d731a6"
-                },
-                {
-                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/14/bd/29515a44719569aa0942551571d89539a1c0633eb78a6d695b462145827f/libusb1-1.9.2-py3-none-any.whl",
                     "sha256": "c3dd4df43b5c38f65bf599413810d021f5f98396c4b6f66765fb98193aca11b0"
                 },
@@ -661,22 +602,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/46/42/5b2017dd807767b96ada1d973c2070c4436f4c34f0919afdcb5a8ced3754/trezor-0.12.2-py3-none-any.whl",
-                    "sha256": "b05d3042aaf12b77a86d603fa0e2b48120055c08ce6e9c85df3c2384d51194f1"
-                }
-            ]
-        },
-        {
-            "name": "python3-typing-extensions",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"typing-extensions==3.7.4.3\""
-            ],
-            "sources": [
+                    "url": "https://files.pythonhosted.org/packages/04/13/de9cf71d5ae317163a863e8e0f3b6f71ed9d74732a2d1ee5fe1ab83861e2/simple-rlp-0.1.2.tar.gz",
+                    "sha256": "5c4a9c58f1b742f7fa8af0fe4ea6ff9fb02294ae041912f771570dfaf339d2b9"
+                },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl",
-                    "sha256": "7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918"
+                    "url": "https://files.pythonhosted.org/packages/11/25/7c1edad18d8959ac4461a251cca2c9fa031d4d8ae1c7c3665502ae5ec068/trezor-0.13.0-py3-none-any.whl",
+                    "sha256": "8c79aab2ea30440a4c6a1380c0373a848f11730bcde43b3de5280a927a8e82cc"
                 }
             ]
         },

@@ -5,17 +5,12 @@
     "runtime-version": "5.15-21.08",
     "command": "electrum",
     "finish-args": [
-        /* Xorg support */
         "--socket=x11",
         "--env=QT_QPA_PLATFORM=xcb",
-        /* Sound */
         "--socket=pulseaudio",
-        /* Persistent storage */
         "--persist=.electrum",
-        /* OpenGL access and QR scanner. */
         "--device=all",
         "--share=ipc",
-        /* Network acess. */
         "--share=network"
     ],
     "cleanup": [
@@ -77,8 +72,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.electrum.org/4.1.5/Electrum-4.1.5.tar.gz",
-                    "sha256": "91472e281f604a7a687faa4b339bf5e484bd2bec82a495ea45bfa014e52719a1",
+                    "url": "https://download.electrum.org/4.2.0/Electrum-4.2.0.tar.gz",
+                    "sha256": "96ced60060faf0070f39c38e577708f72fe904889ec2a6ea2df8d29deddda31d",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10602,
