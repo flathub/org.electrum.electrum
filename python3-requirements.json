@@ -61,16 +61,6 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/65/d4/fabdcc5ee4451c8a8e177e27ddfd131a53a82ecc5a3b68468b7e9f8d70b4/multidict-4.7.6.tar.gz",
-                    "sha256": "fbb77a75e529021e7c4a8d4e823d88ef4d23674a202be4f5addffc72cbb91430"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ac/dd/59768bb3fa08e8b23e91575bca3ff8d2edbfbceebec8c59eaa24c4215791/yarl-1.5.1.tar.gz",
-                    "sha256": "c22c75b5f394f3d47105045ea551e08a3e804dc7e01b37800ca35b58f856c3d6"
-                },
-                {
-                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/e4/d0/6d56fcaca0f44cbcbc8ab3169a17cd90696382a812506fc7041323567d2b/python_socks-1.2.4-py3-none-any.whl",
                     "sha256": "9f12e8fe78629b87543fad0e4ea0ccf103a4fad6a7872c5d0ecb36d9903fa548"
                 },
@@ -199,20 +189,6 @@
             ]
         },
         {
-            "name": "python3-multidict",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"multidict==4.7.6\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/65/d4/fabdcc5ee4451c8a8e177e27ddfd131a53a82ecc5a3b68468b7e9f8d70b4/multidict-4.7.6.tar.gz",
-                    "sha256": "fbb77a75e529021e7c4a8d4e823d88ef4d23674a202be4f5addffc72cbb91430"
-                }
-            ]
-        },
-        {
             "name": "python3-protobuf",
             "buildsystem": "simple",
             "build-commands": [
@@ -227,20 +203,6 @@
             ]
         },
         {
-            "name": "python3-python-socks",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-socks==1.2.4\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e4/d0/6d56fcaca0f44cbcbc8ab3169a17cd90696382a812506fc7041323567d2b/python_socks-1.2.4-py3-none-any.whl",
-                    "sha256": "9f12e8fe78629b87543fad0e4ea0ccf103a4fad6a7872c5d0ecb36d9903fa548"
-                }
-            ]
-        },
-        {
             "name": "python3-QDarkStyle",
             "buildsystem": "simple",
             "build-commands": [
@@ -251,11 +213,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/cd/fd/9972948f02e967b691cc0ca1f26124826a3b88cb38f412a8b7935b8c3c72/QtPy-1.9.0-py2.py3-none-any.whl",
                     "sha256": "fa0b8363b363e89b2a6f49eddc162a04c0699ae95e109a6be3bb145a913190ea"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/0c/af/b7549206bf1b4c618dfefb7650bb09be80fdbe1858e5ab4f1f69db51d9bb/helpdev-0.7.1-py3-none-any.whl",
-                    "sha256": "779a761b18c2d96fb181aa699609f802347806125f2fee2f60dad875a625e38e"
                 },
                 {
                     "type": "file",
@@ -275,53 +232,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/42/87/4a3a77e59ab7493d64da1f69bf1c2e899a4cf81e51b2baa855e8cc8115be/qrcode-6.1-py2.py3-none-any.whl",
                     "sha256": "3996ee560fc39532910603704c82980ff6d4d5d629f9c3f25f34174ce8606cf5"
-                }
-            ]
-        },
-        {
-            "name": "python3-QtPy",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"QtPy==1.9.0\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/cd/fd/9972948f02e967b691cc0ca1f26124826a3b88cb38f412a8b7935b8c3c72/QtPy-1.9.0-py2.py3-none-any.whl",
-                    "sha256": "fa0b8363b363e89b2a6f49eddc162a04c0699ae95e109a6be3bb145a913190ea"
-                }
-            ]
-        },
-        {
-            "name": "python3-yarl",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"yarl==1.5.1\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/65/d4/fabdcc5ee4451c8a8e177e27ddfd131a53a82ecc5a3b68468b7e9f8d70b4/multidict-4.7.6.tar.gz",
-                    "sha256": "fbb77a75e529021e7c4a8d4e823d88ef4d23674a202be4f5addffc72cbb91430"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ac/dd/59768bb3fa08e8b23e91575bca3ff8d2edbfbceebec8c59eaa24c4215791/yarl-1.5.1.tar.gz",
-                    "sha256": "c22c75b5f394f3d47105045ea551e08a3e804dc7e01b37800ca35b58f856c3d6"
-                }
-            ]
-        },
-        {
-            "name": "python3-zipp",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"zipp==3.3.0\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/15/1b/dbf5af0148ba527fb2164d2a2ecf623e77ca93877a83379a5b1aab563e40/zipp-3.3.0-py3-none-any.whl",
-                    "sha256": "eed8ec0b8d1416b2ca33516a37a08892442f3954dee131e92cfd92d8fe3e7066"
                 }
             ]
         },
