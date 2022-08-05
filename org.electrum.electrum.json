@@ -72,8 +72,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.electrum.org/4.2.2/Electrum-4.2.2.tar.gz",
-                    "sha256": "b9c2cb7ea99328ee50a60f8f9e671d43086dedc58c589a058d05a70de704b55b",
+                    "url": "https://download.electrum.org/4.3.0/Electrum-4.3.0.tar.gz",
+                    "sha256": "13de35c2c7884049f5f9dd3a3562902d03340be03c6b4f97c65f8bcc14f011cc",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10602,
