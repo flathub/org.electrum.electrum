@@ -82,10 +82,6 @@
                     }
                 },
                 {
-                    "type": "patch",
-                    "path": "electrum-setup.patch"
-                },
-                {
                     "type": "file",
                     "path": "org.electrum.electrum.metainfo.xml"
                 }
