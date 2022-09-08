@@ -72,18 +72,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.electrum.org/4.2.2/Electrum-4.2.2.tar.gz",
-                    "sha256": "b9c2cb7ea99328ee50a60f8f9e671d43086dedc58c589a058d05a70de704b55b",
+                    "url": "https://download.electrum.org/4.3.1/Electrum-4.3.1.tar.gz",
+                    "sha256": "a4086c1ca20c081dcebad253ae018d4fd3ca7d3717720c548ffc75eae04ad88b",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10602,
                         "version-pattern": "^([\\d.]+)$",
                         "url-template": "https://download.electrum.org/$version/Electrum-$version.tar.gz"
                     }
-                },
-                {
-                    "type": "patch",
-                    "path": "electrum-setup.patch"
                 },
                 {
                     "type": "file",
