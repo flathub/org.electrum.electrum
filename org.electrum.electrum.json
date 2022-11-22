@@ -15,7 +15,6 @@
     ],
     "cleanup": [
         "/include",
-        "/lib/debug",
         "/share/man/man1"
     ],
     "modules": [
