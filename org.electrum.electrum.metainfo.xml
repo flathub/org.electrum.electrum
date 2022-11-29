@@ -47,7 +47,7 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.electrum.electrum/master/screenshots/electrum.png</screenshot>
   </screenshots>
   <releases>
-    <release version="4.3.2" date="2022-09-28"/>
+    <release version="4.3.2" date="2022-09-28">
       <ul>
         <li>When creating new requests, reuse addresses of expired requests
         (fixes #7927).</li>
