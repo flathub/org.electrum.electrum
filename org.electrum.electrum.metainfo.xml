@@ -53,7 +53,7 @@
         (fixes #7927).</li>
         <li>Index requests by ID instead of receiving address. This affects the
         following commands: get_request, get_invoice, list_requests,
-        list_invoices, delete_request, delete_invoice<\li>
+        list_invoices, delete_request, delete_invoice</li>
         <li>Trampoline routing: remember routes that have failed. Try other
         routes instead of systematically raising tampoline fees.</li>
         <li>Fix sweep to_local output from channel backup (#7959)</li>
