@@ -47,6 +47,23 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.electrum.electrum/master/screenshots/electrum.png</screenshot>
   </screenshots>
   <releases>
+    <release version="4.3.2" date="2022-09-28">
+      <ul>
+        <li>When creating new requests, reuse addresses of expired requests
+        (fixes #7927).</li>
+        <li>Index requests by ID instead of receiving address. This affects the
+        following commands: get_request, get_invoice, list_requests,
+        list_invoices, delete_request, delete_invoice</li>
+        <li>Trampoline routing: remember routes that have failed. Try other
+        routes instead of systematically raising tampoline fees.</li>
+        <li>Fix sweep to_local output from channel backup (#7959)</li>
+        <li>Harden build script for macOS binary: avoid using
+        precompiled wheels from PyPI for most packages (#7918)</li>
+        <li>The Windows/AppImage/Android binaries are now built on debian using
+        the snapshot.debian.org archive instead of ubuntu. This should help
+        with historical reproducibility. (#7926)</li>
+      </ul>
+    </release>
     <release version="4.3.1" date="2022-08-18"/>
     <release version="4.2.2" date="2022-05-27"/>
     <release version="4.2.1" date="2022-03-27"/>
