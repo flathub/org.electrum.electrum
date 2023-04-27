@@ -2,7 +2,7 @@
     "id": "org.electrum.electrum",
     "sdk": "org.kde.Sdk",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-21.08",
+    "runtime-version": "5.15-22.08",
     "command": "electrum",
     "finish-args": [
         "--socket=x11",
@@ -71,14 +71,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.electrum.org/4.3.2/Electrum-4.3.2.tar.gz",
-                    "sha256": "bd3640ad3c1b29c7fafef3d03af8ee6cf79cb20fa1f90959eab75b97aa8d7ecd",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 10602,
-                        "version-pattern": "^([\\d.]+)$",
-                        "url-template": "https://download.electrum.org/$version/Electrum-$version.tar.gz"
-                    }
+                    "url": "https://download.electrum.org/4.4.0/Electrum-4.4.0.tar.gz",
+                    "sha256": "48757e7c20e17e0221eecf0bede0db2a3f1b9074959bb2763cf438090a69e9c2"
                 },
                 {
                     "type": "file",
