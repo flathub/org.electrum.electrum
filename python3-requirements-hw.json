@@ -68,7 +68,7 @@
             "name": "python3-ledger-bitcoin",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ledger-bitcoin<0.2.0,>=0.1.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ledger-bitcoin<0.3.0,>=0.2.0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -78,13 +78,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b4/e7/5b64813ce616c586477d7212b48fde397445b532b6e1d64e2b17811148a5/ledgercomm-1.1.2-py3-none-any.whl",
-                    "sha256": "e3a39198b7c01135d7bdb049948ac41ce22cd8d39ddf6fbfc236a228d560a0ce"
+                    "url": "https://files.pythonhosted.org/packages/43/5a/d2cdbea659fe725644014dbb0ac93a4f8e3d2b4f6ed914bcf212165c596f/ledgercomm-1.2.0-py3-none-any.whl",
+                    "sha256": "e21fdaca6bc82b32d3acdd1b1a2c9e2ff3e47559e56c981b40fd8954605ad096"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/eb/07/b448f43b119805d67c6a6dc33f98400ae87817104f7b3920d9d841f8e027/ledger_bitcoin-0.1.2-py3-none-any.whl",
-                    "sha256": "e8edad936c3aa7c50de6743e1f50b9a01e84e23634823dbadd90d90cd55b53dd"
+                    "url": "https://files.pythonhosted.org/packages/ba/f6/9c63c0f3a0bf2a1808c82e3cfd87b8fd1ee67ab72d941ebc8f3c68cdc9f9/ledger_bitcoin-0.2.1-py3-none-any.whl",
+                    "sha256": "1160aa887df9f88539110c3c88535fc838cfff26600a326df23b4a09f09036f1"
                 }
             ]
         },
