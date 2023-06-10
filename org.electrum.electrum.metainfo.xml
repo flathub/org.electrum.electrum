@@ -47,6 +47,16 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.electrum.electrum/master/screenshots/electrum.png</screenshot>
   </screenshots>
   <releases>
+    <release version="4.4.4" date="2023-05-31">
+      <ul>
+        <li>fix creating multisig wallets involving BIP39 seeds (#8432)</li>
+        <li>fix "cannot scroll to open a lightning channel" (#8446)</li>
+        <li>wizard: "confirm seed" screen to normalize whitespaces (#8442)</li>
+        <li>fix assert on address details screen (#8420)</li>
+        <li>better handle some expected errors in SwapDialog (#8430)</li>
+        <li>libsecp256k1: bump bundled version to 0.3.2 (10574bb1)</li>
+      </ul>
+    </release>
     <release version="4.4.1" date="2023-04-27"/>
     <release version="4.4.0" date="2023-04-19"/>
     <release version="4.3.2" date="2022-09-28">
