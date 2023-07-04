@@ -71,8 +71,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.electrum.org/4.4.4/Electrum-4.4.4.tar.gz",
-                    "sha256": "6b4227f4f011577c522425e080a89c8260415a3894c4617f2db3f88cb653bf17"
+                    "url": "https://download.electrum.org/4.4.5/Electrum-4.4.5.tar.gz",
+                    "sha256": "ad341c9c47c7685acbbcf9c8d48665f6e9360f43452e7d0f49a1ac23d2b22ebe"
                 },
                 {
                     "type": "file",

@@ -47,6 +47,13 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.electrum.electrum/master/screenshots/electrum.png</screenshot>
   </screenshots>
   <releases>
+    <release version="4.4.5" date="2023-06-20">
+      <ul>
+        <li>fix regression in sign_transaction (#8463)</li>
+        <li>fix "rebalance_channels" function (#8468)</li>
+        <li>enforce that we run with python asserts enabled,regardless of platform</li>
+      </ul>
+    </release>
     <release version="4.4.4" date="2023-05-31">
       <ul>
         <li>fix creating multisig wallets involving BIP39 seeds (#8432)</li>
