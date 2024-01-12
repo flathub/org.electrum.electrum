@@ -63,6 +63,7 @@
         "python3-requirements-binaries.json",
         "python3-requirements.json",
         "python3-requirements-hw.json",
+        "python3-jsonpatch.json",
         {
             "name": "electrum",
             "buildsystem": "simple",
@@ -77,8 +78,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.electrum.org/4.4.6/Electrum-4.4.6.tar.gz",
-                    "sha256": "071c42d7154a4e8523801a3898478af537616ddffe7681dc4d326c5c3b5a10b8"
+                    "url": "https://download.electrum.org/4.5.0/Electrum-4.5.0.tar.gz",
+                    "sha256": "b38147f05b4f838c1ea54ff95c8d3ad9d00df5f098475c491b0af17ed0922b3c"
                 },
                 {
                     "type": "file",
