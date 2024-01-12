@@ -2,7 +2,9 @@
     "id": "org.electrum.electrum",
     "sdk": "org.kde.Sdk",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-22.08",
+    "runtime-version": "5.15-23.08",
+    "base": "com.riverbankcomputing.PyQt.BaseApp",
+    "base-version": "5.15-23.08",
     "command": "electrum",
     "finish-args": [
         "--socket=x11",
@@ -13,44 +15,48 @@
         "--share=ipc",
         "--share=network"
     ],
+    "build-options": {
+        "env": {
+            "BASEAPP_REMOVE_WEBENGINE": "1"
+        }
+    },
     "cleanup": [
         "/include",
         "/share/man/man1"
+    ],
+    "cleanup-commands": [
+        "/app/cleanup-BaseApp.sh"
     ],
     "modules": [
         "shared-modules/libusb/libusb.json",
         "libsecp256k1.json",
         {
             "name": "zbar",
+            "buildsystem": "autotools",
             "config-opts": [
+                "--disable-doc",
+                "--disable-video",
+                "--enable-codes=qrcode",
+                "--with-python=python3",
+                "--without-dbus",
+                "--without-gtk",
+                "--without-imagemagick",
+                "--without-java",
+                "--without-npapi",
                 "--without-qt",
                 "--without-qt5",
-                "--without-gtk",
-                "--without-xv",
-                "--without-imagemagick",
-                "--without-dbus",
-                "--disable-video",
-                "--without-java",
-                "--with-python=python3",
-                "--with-doc=no",
-                "--without-npapi",
                 "--without-xshm",
-                "--with-python_prefix=\"${FLATPAK_DEST}\"",
-                "--with-python_exe_prefix=\"${FLATPAK_DEST}\"",
-                "--enable-codes=qrcode"
+                "--without-xv"
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://git.linuxtv.org/zbar.git",
-                    "commit": "aac86d5f08d64ab4c3da78188eb622fa3cb07182"
+                    "type": "archive",
+                    "url": "https://www.linuxtv.org/downloads/zbar/zbar-0.23.90.tar.gz",
+                    "sha256": "ff857dd7e3dbe043dac3765b5182c91dfd0477800713a75d15287d797cee60fa"
                 },
                 {
-                    "type": "script",
-                    "dest-filename": "autogen.sh",
-                    "commands": [
-                        "autoreconf -vfi -W none"
-                    ]
+                    "type": "patch",
+                    "path": "patches/py311.patch"
                 }
             ]
         },

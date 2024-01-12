@@ -46,47 +46,6 @@
                     "sha256": "a04386fb7bc85fab9cd51b6308633a3c271e3d0d3eae917eebab2fac6219b6d2"
                 }
             ]
-        },
-        {
-            "name": "PyQt5",
-            "cleanup": ["/bin/sip", "/include", "/lib/python3.10/site-packages/*.pyi"],
-            "config-opts": ["--disable-static", "--enable-x11"],
-            "buildsystem": "simple",
-            "build-commands": [
-                "python3 configure.py --confirm-license --no-docstrings --assume-shared --no-sip-files --no-qml-plugin --no-tools --no-qsci-api -d ${FLATPAK_DEST}/lib/python3.10/site-packages --sip=${FLATPAK_DEST}/bin/sip --sip-incdir=${FLATPAK_DEST}/include --stubsdir=${FLATPAK_DEST}/lib/python3.10/site-packages --disable=QtSensors --disable=QtWebEngine --disable=QtQuick --disable=QtQml --disable=QtTest --disable=QtWebChannel --disable=QtWebEngineCore --disable=QWebEngineWidgets --disable=QtQuickWidgets --disable=QtSql --disable=QtXmlPatterns --disable=QtMultimedia --disable=QtMultimediaWidgets --disable=QtLocation --disable=QtDesigner --disable=QtOpenGL --disable=QtBluetooth --disable=QtWebKit --disable=QtWebKitWidgets --disable=QtNfc --disable=QtPositioning",
-                "make -j $FLATPAK_BUILDER_N_JOBS",
-                "make install"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/1d/31/896dc3dfb6c81c70164019a6cbba6ab037e3af7653d9ca60ccc874ee4c27/PyQt5-5.15.1.tar.gz",
-                    "sha256": "d9a76b850246d08da9863189ecb98f6c2aa9b4d97a3e85e29330a264aed0f9a1"
-                },
-                {
-                    "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/73/8c/c662b7ebc4b2407d8679da68e11c2a2eb275f5f2242a92610f6e5024c1f2/PyQt5_sip-12.8.1.tar.gz",
-                    "sha256": "30e944db9abee9cc757aea16906d4198129558533eb7fadbe48c5da2bd18e0bd"
-                }
-            ],
-            "modules": [
-                {
-                    "name": "sip",
-                    "buildsystem": "simple",
-                    "build-commands": [
-                        "python3 configure.py --sip-module PyQt5.sip -b ${FLATPAK_DEST}/bin -d ${FLATPAK_DEST}/lib/python3.10/site-packages -e ${FLATPAK_DEST}/include -v ${FLATPAK_DEST}/share/sip --stubsdir=${FLATPAK_DEST}/lib/python3.10/site-packages",
-                        "make -j $FLATPAK_BUILDER_N_JOBS",
-                        "make install"
-                    ],
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://www.riverbankcomputing.com/static/Downloads/sip/4.19.25/sip-4.19.25.tar.gz",
-                            "sha256": "b39d93e937647807bac23579edbff25fe46d16213f708370072574ab1f1b4211"
-                        }
-                    ]
-                }
-            ]
         }
     ]
 }
