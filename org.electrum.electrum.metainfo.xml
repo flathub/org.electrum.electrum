@@ -47,9 +47,10 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.electrum.electrum/master/screenshots/electrum.png</screenshot>
   </screenshots>
   <releases>
+    <release version="4.5.0" date="2024-01-12"/>
     <release version="4.4.6" date="2023-08-18">
       <ul>
-        <li> security fix: multiple lightning-related security issues have been fixed.</li>
+        <li>security fix: multiple lightning-related security issues have been fixed.</li>
         <li>fix lnurl-pay when config.BTC_AMOUNTS_ADD_THOUSANDS_SEP is True(5b4df759)</li>
         <li>fix: we would sometimes attempt sending MPP even if not supported by the invoice (2cf6173c)</li>
         <li>Trezor: support longer than 9 character PIN codes (#8526)</li>
