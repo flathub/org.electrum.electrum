@@ -61,18 +61,18 @@
             "name": "python3-aiohttp-socks",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"aiohttp-socks==0.6.0\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"aiohttp_socks\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e4/d0/6d56fcaca0f44cbcbc8ab3169a17cd90696382a812506fc7041323567d2b/python_socks-1.2.4-py3-none-any.whl",
-                    "sha256": "9f12e8fe78629b87543fad0e4ea0ccf103a4fad6a7872c5d0ecb36d9903fa548"
+                    "url": "https://files.pythonhosted.org/packages/0c/82/cbb43250a471a98511c982a2d795fb99f7e2e91f0c5077f034cd50496d21/python_socks-2.4.4-py3-none-any.whl",
+                    "sha256": "fda465d3ef229119ee614eb85f2b7c0ad28be6dd40e0ef8dd317c49e8725e514"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9a/6c/d302e5a8097fee1e83b9f8e9da10d7752fbf27c74db18b3cc9528b3479be/aiohttp_socks-0.6.0-py3-none-any.whl",
-                    "sha256": "db7aa48c0758ee45d7dbc1fde499912ec6fb77eab77a6e2808825d1f41d4e300"
+                    "url": "https://files.pythonhosted.org/packages/3f/81/cae77c14d88f5300b698c9ce39ae596605689b928495f1e66ec5648ad4b2/aiohttp_socks-0.8.4-py3-none-any.whl",
+                    "sha256": "74b21105634ed31d56ed6fee43701ca16218b53475e606d56950a4d17e8290ea"
                 }
             ]
         },
