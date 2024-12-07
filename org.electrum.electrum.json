@@ -2,9 +2,9 @@
     "id": "org.electrum.electrum",
     "sdk": "org.kde.Sdk",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-23.08",
+    "runtime-version": "5.15-24.08",
     "base": "com.riverbankcomputing.PyQt.BaseApp",
-    "base-version": "5.15-23.08",
+    "base-version": "5.15-24.08",
     "command": "electrum",
     "finish-args": [
         "--socket=x11",
@@ -51,12 +51,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.linuxtv.org/downloads/zbar/zbar-0.23.90.tar.gz",
-                    "sha256": "ff857dd7e3dbe043dac3765b5182c91dfd0477800713a75d15287d797cee60fa"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/py311.patch"
+                    "url": "https://linuxtv.org/downloads/zbar/zbar-0.23.93.tar.gz",
+                    "sha256": "78ae427a529f0399561bc198de5c2c7ca3f11d05fa9e903e65e501168433d218"
                 }
             ]
         },
@@ -78,8 +74,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.electrum.org/4.5.4/Electrum-4.5.4.tar.gz",
-                    "sha256": "943bb05e13a371b0b1f31fe82288a0ae4943c026e19f5b6b7f99437ff5ffd507"
+                    "url": "https://download.electrum.org/4.5.8/Electrum-4.5.8.tar.gz",
+                    "sha256": "dd8595a138132dee87cee76ce760a1d622fc2fd65d3b6ac7df7e53b7fb6ea7e8"
                 },
                 {
                     "type": "file",

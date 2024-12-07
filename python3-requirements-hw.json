@@ -21,7 +21,7 @@
             "name": "python3-bitbox02",
             "buildsystem": "simple",
             "build-commands": [
-                "env C_INCLUDE_PATH=/app/include/libusb-1.0 pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"bitbox02==6.2.0\""
+                "env C_INCLUDE_PATH=/app/include/libusb-1.0 pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"bitbox02\""
             ],
             "sources": [
                 {
@@ -36,8 +36,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/95/0e/c106800c94219ec3e6b483210e91623117bfafcf1decaff3c422e18af349/hidapi-0.14.0.tar.gz",
-                    "sha256": "a7cb029286ced5426a381286526d9501846409701a29c2538615c3d1a612b8be"
+                    "url": "https://files.pythonhosted.org/packages/47/72/21ccaaca6ffb06f544afd16191425025d831c2a6d318635e9c8854070f2d/hidapi-0.14.0.post4.tar.gz",
+                    "sha256": "48fce253e526d17b663fbf9989c71c7ef7653ced5f4be65f1437c313fb3dbdf6"
                 },
                 {
                     "type": "file",
@@ -46,8 +46,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e1/54/1f091b465312a316d91696d7ff5d2a9fc3770e4bee9e9ff3b0c166c2b0c7/bitbox02-6.2.0-py3-none-any.whl",
-                    "sha256": "5a8290bd270468ccdf2e6ff7174d25ea2b2f191e19734a79aa573c2b982c266f"
+                    "url": "https://files.pythonhosted.org/packages/9c/ec/9952e54d30d4d1ebd957e364e85fee49e889f413fb1f9118bdf1ac427555/bitbox02-6.3.0-py3-none-any.whl",
+                    "sha256": "36c9d34b78f040291e7ade54dc8f1990e69d9169b3fb2456a4c7e434475b1d21"
                 }
             ]
         },
