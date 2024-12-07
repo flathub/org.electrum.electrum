@@ -3,6 +3,7 @@
     "buildsystem": "simple",
     "build-commands": [],
     "modules": [
+        "python3-poetry.json",
         {
             "name": "python3-aiohttp",
             "buildsystem": "simple",
@@ -12,8 +13,18 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fd/01/f180d31923751fd20185c96938994823f00918ee5ac7b058edc005382406/aiohttp-3.8.6.tar.gz",
-                    "sha256": "b0cf2a4501bff9330a8a5248b4ce951851e415bdcce9dc158e76cfd55e15085c"
+                    "url": "https://files.pythonhosted.org/packages/94/c4/3b5a937b16f6c2a0ada842a9066aad0b7a5708427d4a202a07bf09c67cbb/aiohttp-3.11.10.tar.gz",
+                    "sha256": "b1fc6b45010a8d0ff9e88f9f2418c6fd408c99c211257334aff41597ebece42e"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/b9/74/fbb6559de3607b3300b9be3cc64e97548d55678e44623db17820dbd20002/aiohappyeyeballs-2.4.4-py3-none-any.whl",
+                    "sha256": "a980909d50efcd44795c4afeca523296716d50cd756ddca6af8c65b996e27de8"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/41/b6/c5319caea262f4821995dca2107483b94a3345d4607ad797c76cb9c36bcc/propcache-0.2.1-py3-none-any.whl",
+                    "sha256": "52277518d6aae65536e9cea52d4e7fd2f7a66f4aa2d30ed3f2fcea620ace3c54"
                 },
                 {
                     "type": "file",
@@ -22,8 +33,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a7/fa/e01228c2938de91d47b307831c62ab9e4001e747789d0b05baf779a6488c/async_timeout-4.0.3-py3-none-any.whl",
-                    "sha256": "7405140ff1230c310e51dc27b3145b9092d659ce68ff733fb0cefe3ee42be028"
+                    "url": "https://files.pythonhosted.org/packages/fe/ba/e2081de779ca30d473f21f5b30e0e737c438205440784c7dfc81efc2b029/async_timeout-5.0.1-py3-none-any.whl",
+                    "sha256": "39e3809566ff85354557ec2398b55e096c8364bacac9405a7a1fa429e77fe76c"
                 },
                 {
                     "type": "file",
@@ -47,13 +58,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4a/15/bd620f7a6eb9aa5112c4ef93e7031bcd071e0611763d8e17706ef8ba65e0/multidict-6.0.4.tar.gz",
-                    "sha256": "3666906492efb76453c0e7b97f2cf459b0682e7402c0489a95484965dbc1da49"
+                    "url": "https://files.pythonhosted.org/packages/99/b7/b9e70fde2c0f0c9af4cc5277782a89b66d35948ea3369ec9f598358c3ac5/multidict-6.1.0-py3-none-any.whl",
+                    "sha256": "48e171e52d1c4d33888e529b999e5900356b9ae588c2f09a52dcefb158b27506"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5f/3f/04b3c5e57844fb9c034b09c5cb6d2b43de5d64a093c30529fd233e16cf09/yarl-1.9.2.tar.gz",
-                    "sha256": "04ab9d4b9f587c06d801c2abfe9317b77cdf996c65a90d5e84ecc45010823571"
+                    "url": "https://files.pythonhosted.org/packages/f5/4b/a06e0ec3d155924f77835ed2d167ebd3b211a7b0853da1cf8d8414d784ef/yarl-1.18.3-py3-none-any.whl",
+                    "sha256": "b57f4f58099328dfb26c6a771d09fb20dbbae81d20cfb66141251ea063bd101b"
                 }
             ]
         },
@@ -66,13 +77,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/0c/82/cbb43250a471a98511c982a2d795fb99f7e2e91f0c5077f034cd50496d21/python_socks-2.4.4-py3-none-any.whl",
-                    "sha256": "fda465d3ef229119ee614eb85f2b7c0ad28be6dd40e0ef8dd317c49e8725e514"
+                    "url": "https://files.pythonhosted.org/packages/7e/54/6b907fd2bac4db271902a7a885d4521313b3b754973cfcedb2fb06bf9a00/python_socks-2.5.3-py3-none-any.whl",
+                    "sha256": "6bc428d0e19f8043e7b8fbc8af33417e690238bd8c9c1e9215871ac18c6136ad"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/3f/81/cae77c14d88f5300b698c9ce39ae596605689b928495f1e66ec5648ad4b2/aiohttp_socks-0.8.4-py3-none-any.whl",
-                    "sha256": "74b21105634ed31d56ed6fee43701ca16218b53475e606d56950a4d17e8290ea"
+                    "url": "https://files.pythonhosted.org/packages/48/8c/aeda838978f73418490d6db6fc7102d32b5145f10efb2cef24fb8e53171e/aiohttp_socks-0.9.1-py3-none-any.whl",
+                    "sha256": "8e30dff7cd21806979bfa76ef5697ca03b05665521bc00e6e0d7fd029c917886"
                 }
             ]
         },
@@ -192,18 +203,18 @@
             "name": "python3-QDarkStyle",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"QDarkStyle==2.8.1\""
+                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"QDarkStyle\""
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/cd/fd/9972948f02e967b691cc0ca1f26124826a3b88cb38f412a8b7935b8c3c72/QtPy-1.9.0-py2.py3-none-any.whl",
-                    "sha256": "fa0b8363b363e89b2a6f49eddc162a04c0699ae95e109a6be3bb145a913190ea"
+                    "url": "https://files.pythonhosted.org/packages/0a/0c/58a1e48209b0b1220ca2368435573f39ff1fa3577b7eef913f8960c5d429/QtPy-2.4.2-py3-none-any.whl",
+                    "sha256": "5a696b1dd7a354cb330657da1d17c20c2190c72d4888ba923f8461da67aa1a1c"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e8/8e/cf0f5444b2389d860578292a811f5a9de3d2c0841df3ffe45a6a8e8f77c3/QDarkStyle-2.8.1-py2.py3-none-any.whl",
-                    "sha256": "7cead57817a8a1f38b48d76ef38986b6cc397d0315c0dd0431fcd06749556947"
+                    "url": "https://files.pythonhosted.org/packages/93/7d/c3c10498430dadcea4def5faddf71cd199e577d20a125e7ef1e9d7bdbbfa/QDarkStyle-3.2.3-py2.py3-none-any.whl",
+                    "sha256": "ea980ee426d594909cf1058306832af71ff6cbad6f69237b036d1550635aefbc"
                 }
             ]
         },
