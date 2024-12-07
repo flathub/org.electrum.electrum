@@ -51,6 +51,13 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="4.5.8" date="2024-10-24">
+      <description>
+        <ul>
+          <li>fix: regression: bump_fee and dscancel dialogs erroring (#9273)</li>
+        </ul>
+      </description>
+    </release>
     <release version="4.5.4" date="2024-03-14">
       <description>
         <ul>
