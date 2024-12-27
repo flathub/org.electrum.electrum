@@ -7,9 +7,9 @@
     "base-version": "5.15-24.08",
     "command": "electrum",
     "finish-args": [
-        "--socket=x11",
-        "--env=QT_QPA_PLATFORM=xcb",
+        "--socket=fallback-x11",
         "--socket=pulseaudio",
+        "--socket=wayland",
         "--persist=.electrum",
         "--device=all",
         "--share=ipc",
