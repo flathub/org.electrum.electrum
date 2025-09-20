@@ -2,9 +2,9 @@
     "id": "org.electrum.electrum",
     "sdk": "org.kde.Sdk",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-24.08",
+    "runtime-version": "6.9",
     "base": "com.riverbankcomputing.PyQt.BaseApp",
-    "base-version": "5.15-24.08",
+    "base-version": "6.9",
     "command": "electrum",
     "finish-args": [
         "--socket=x11",
@@ -61,6 +61,34 @@
         "python3-requirements-hw.json",
         "python3-jsonpatch.json",
         {
+            "name": "python3-electrum_ecc",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"electrum_ecc\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/1a/c2/500b5b89c7c4d930127b86dafa066cf2cfec0442edcff349112dad60d980/electrum_ecc-0.0.6.tar.gz",
+                    "sha256": "6360c71fb08b51d80a455e938f126ba4c790be74ba226461d54d7a3aa6890b89"
+                }
+            ]
+        },
+        {
+            "name": "python3-electrum_aionostr",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"electrum_aionostr\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/9b/54/1e6d5b3745a681b34b5256c332535f4c10749f34f49d526d8ae206acc6a6/electrum_aionostr-0.0.11.tar.gz",
+                    "sha256": "0eeb1d01e55d4bab2c116268965a0b2c11490659e969fd864c453104558bcf81"
+                }
+            ]
+        },
+        {
             "name": "electrum",
             "buildsystem": "simple",
             "build-commands": [
@@ -74,8 +102,19 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.electrum.org/4.5.8/Electrum-4.5.8.tar.gz",
-                    "sha256": "dd8595a138132dee87cee76ce760a1d622fc2fd65d3b6ac7df7e53b7fb6ea7e8"
+                    "url": "https://download.electrum.org/4.6.2/Electrum-4.6.2.tar.gz",
+                    "sha256": "66bc3301e78c36bb3a2b32c60e0e68045ec4f8618b60255cccee91d7c4ca46e1",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 10602,
+                        "version-pattern": "^([\\d.]+)$",
+                        "url-template": "https://download.electrum.org/$version/Electrum-$version.tar.gz"
+                    }
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/33/cf/8435d5a7159e2a9c83a95896ed596f68cf798005fe107cc655b5c5c14704/urllib3-1.26.20-py2.py3-none-any.whl",
+                    "sha256": "0ed14ccfbf1c30a9072c7ca157e4319b70d65f623e91e7b32fadb2853431016e"
                 },
                 {
                     "type": "file",

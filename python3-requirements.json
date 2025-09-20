@@ -38,8 +38,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f0/eb/fcb708c7bf5056045e9e98f62b93bd7467eb718b0202e7698eb11d66416c/attrs-23.1.0-py3-none-any.whl",
-                    "sha256": "1f28b4522cdc2fb4256ac1a020c78acf9cba2c6b461ccd2c126f3aa8e8335d04"
+                    "url": "https://files.pythonhosted.org/packages/fb/6e/6f83bf616d2becdf333a1640f1d463fef3150e2e926b7010cb0f81c95e88/attrs-22.2.0-py3-none-any.whl",
+                    "sha256": "29e95c7f6778868dbd49170f98f8818f78f3dc5e0e37c0b1f474e3561b240836"
                 },
                 {
                     "type": "file",
@@ -77,13 +77,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/7e/54/6b907fd2bac4db271902a7a885d4521313b3b754973cfcedb2fb06bf9a00/python_socks-2.5.3-py3-none-any.whl",
-                    "sha256": "6bc428d0e19f8043e7b8fbc8af33417e690238bd8c9c1e9215871ac18c6136ad"
+                    "url": "https://files.pythonhosted.org/packages/8d/e6/1fdebffa733e79e67b43ee8930e4e5049eb51eae3608caeafc83518798aa/python_socks-2.7.2-py3-none-any.whl",
+                    "sha256": "d311aefbacc0ddfaa1fa1c32096c436d4fe75b899c24d78e677e1b0623c52c48"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/48/8c/aeda838978f73418490d6db6fc7102d32b5145f10efb2cef24fb8e53171e/aiohttp_socks-0.9.1-py3-none-any.whl",
-                    "sha256": "8e30dff7cd21806979bfa76ef5697ca03b05665521bc00e6e0d7fd029c917886"
+                    "url": "https://files.pythonhosted.org/packages/d3/04/7ff144f7465e83cf87459ffd74688871918496acd4816507cca1af5623d3/aiohttp_socks-0.10.1-py3-none-any.whl",
+                    "sha256": "6fd4d46c09f952f971a011ff446170daab8d539cf5310c0627f8423df2fb15ea"
                 }
             ]
         },
@@ -91,13 +91,13 @@
             "name": "python3-aiorpcX",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install  --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"aiorpcX==0.22.1\""
+                "pip3 install  --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"aiorpcX==0.25.0\""
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/eb/4f/ba4e6c6ae59f6820c676fc00ed4ea45ae224d0a722fd07b8140e403ac7cb/aiorpcX-0.22.1-py3-none-any.whl",
-                    "sha256": "e74f9fbed3fd21598e71fe05066618fc2c06feec504fe29490ddda05fdbdde62"
+                    "url": "https://files.pythonhosted.org/packages/c8/b6/582baa3cdb31d3e13976e99eac8362ddbedb7c337c22788ed31e1f685147/aiorpcX-0.25.0-py3-none-any.whl",
+                    "sha256": "b0bdc9679a5908d3fe5bfc8fd626721dd8b64509028e909d292e9c6a49e983aa"
                 }
             ]
         },
@@ -138,8 +138,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/90/49/cb426577c28ca3e35332815b795a99e467523843fc83cc85ca0d6be2515a/dnspython-2.0.0-py3-none-any.whl",
-                    "sha256": "40bb3c24b9d4ec12500f0124288a65df232a3aa749bb0c39734b782873a2544d"
+                    "url": "https://files.pythonhosted.org/packages/f6/b4/0a9bee52c50f226a3cbfb54263d02bb421c7f2adc136520729c2c689c1e5/dnspython-2.4.2-py3-none-any.whl",
+                    "sha256": "57c6fbaaeaaf39c891292012060beb141791735dbb4004798328fc2c467402d8"
                 }
             ]
         },
