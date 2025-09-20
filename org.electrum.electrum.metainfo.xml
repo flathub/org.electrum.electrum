@@ -51,6 +51,9 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="4.6.2" date="2025-08-25">
+      <description></description>
+    </release>
     <release version="4.5.8" date="2024-10-24">
       <description>
         <ul>
@@ -75,7 +78,7 @@
         <ul>
           <li>fix: MPP regression when using gossip that made paying small invoices fail (95c55c542)</li>
           <li>fix: better handle dataloss (#8814)</li>
-          <li>also support unfinished wallets when opened through File>Open (#8809)</li>
+          <li>also support unfinished wallets when opened through File&gt;Open (#8809)</li>
           <li>fix crash when LNURLp is scanned/pasted (#8822)</li>
           <li>fix crash for new wallets having cosigner using hww #8808)</li>
           <li>fix crash in finalizer when txid is undefined (#8807)</li>

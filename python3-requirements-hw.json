@@ -26,8 +26,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9a/77/0cc7a8a3bc7e53d07e8f47f147b92b0960e902b8254859f4aee5c4d7866b/semver-3.0.2-py3-none-any.whl",
-                    "sha256": "b1ea4686fe70b981f85359eda33199d60c53964284e0cfb4977d243e37cf4bf4"
+                    "url": "https://files.pythonhosted.org/packages/a6/24/4d91e05817e92e3a61c8a21e08fd0f390f5301f1c448b137c57c4bc6e543/semver-3.0.4-py3-none-any.whl",
+                    "sha256": "9c824d87ba7f7ab4a1890799cec8596f15c1241cb473404ea1cb0c55e4b04746"
                 },
                 {
                     "type": "file",
@@ -41,13 +41,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b7/f4/6a90020cd2d93349b442bfcb657d0dc91eee65491600b2cb1d388bc98e6b/typing_extensions-4.9.0-py3-none-any.whl",
-                    "sha256": "af72aea155e91adfc61c3ae9e0e342dbc0cba726d6cba4b6c72c1f34e47291cd"
+                    "url": "https://files.pythonhosted.org/packages/18/67/36e9267722cc04a6b9f15c7f3441c2363321a3ea07da7ae0c0707beb2a9c/typing_extensions-4.15.0-py3-none-any.whl",
+                    "sha256": "f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9c/ec/9952e54d30d4d1ebd957e364e85fee49e889f413fb1f9118bdf1ac427555/bitbox02-6.3.0-py3-none-any.whl",
-                    "sha256": "36c9d34b78f040291e7ade54dc8f1990e69d9169b3fb2456a4c7e434475b1d21"
+                    "url": "https://files.pythonhosted.org/packages/ea/a2/f62f1e9d49017d3a315756939ec8a6544c8155b33ef1046c77d1d132ba20/bitbox02-7.0.0-py3-none-any.whl",
+                    "sha256": "4b5b8422b94390b09962a4a93f4a9861429c093eb0f0b6c2d7661bbc1dd0e242"
                 }
             ]
         },
