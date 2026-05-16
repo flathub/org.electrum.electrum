@@ -2,9 +2,9 @@
     "id": "org.electrum.electrum",
     "sdk": "org.kde.Sdk",
     "runtime": "org.kde.Platform",
-    "runtime-version": "6.9",
+    "runtime-version": "6.10",
     "base": "com.riverbankcomputing.PyQt.BaseApp",
-    "base-version": "6.9",
+    "base-version": "6.10",
     "command": "electrum",
     "finish-args": [
         "--socket=x11",
@@ -28,66 +28,20 @@
         "/app/cleanup-BaseApp.sh"
     ],
     "modules": [
-        "shared-modules/libusb/libusb.json",
-        "libsecp256k1.json",
-        {
-            "name": "zbar",
-            "buildsystem": "autotools",
-            "config-opts": [
-                "--disable-doc",
-                "--disable-video",
-                "--enable-codes=qrcode",
-                "--with-python=python3",
-                "--without-dbus",
-                "--without-gtk",
-                "--without-imagemagick",
-                "--without-java",
-                "--without-npapi",
-                "--without-qt",
-                "--without-qt5",
-                "--without-xshm",
-                "--without-xv"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://linuxtv.org/downloads/zbar/zbar-0.23.93.tar.gz",
-                    "sha256": "78ae427a529f0399561bc198de5c2c7ca3f11d05fa9e903e65e501168433d218"
-                }
-            ]
-        },
-        "python3-requirements-binaries.json",
-        "python3-requirements.json",
-        "python3-requirements-hw.json",
-        "python3-jsonpatch.json",
-        {
-            "name": "python3-electrum_ecc",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"electrum_ecc\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/1a/c2/500b5b89c7c4d930127b86dafa066cf2cfec0442edcff349112dad60d980/electrum_ecc-0.0.6.tar.gz",
-                    "sha256": "6360c71fb08b51d80a455e938f126ba4c790be74ba226461d54d7a3aa6890b89"
-                }
-            ]
-        },
-        {
-            "name": "python3-electrum_aionostr",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"electrum_aionostr\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9b/54/1e6d5b3745a681b34b5256c332535f4c10749f34f49d526d8ae206acc6a6/electrum_aionostr-0.0.11.tar.gz",
-                    "sha256": "0eeb1d01e55d4bab2c116268965a0b2c11490659e969fd864c453104558bcf81"
-                }
-            ]
-        },
+        "modules/libsecp256k1.json",
+        "modules/zbar.json",
+        "modules/python3-requirements-binaries.json",
+        "modules/python3-scikit_build_core.json",
+        "modules/python3-backports.json",
+        "modules/python3-poetry.json",
+        "modules/python3-maturin.json",
+        "modules/python3-puccinialin.json",
+        "modules/python3-tibs.json",
+        "modules/python3-requirements.json",
+        "modules/python3-requirements-hw.json",
+        "modules/python3-jsonpatch.json",
+        "modules/python3-electrum_ecc.json",
+        "modules/python3-electrum_aionostr.json",
         {
             "name": "electrum",
             "buildsystem": "simple",
@@ -102,8 +56,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.electrum.org/4.6.2/Electrum-4.6.2.tar.gz",
-                    "sha256": "66bc3301e78c36bb3a2b32c60e0e68045ec4f8618b60255cccee91d7c4ca46e1",
+                    "url": "https://download.electrum.org/4.7.2/Electrum-4.7.2.tar.gz",
+                    "sha256": "ab303f1cbc3e40f4dd13aaac83c4cdaabd03b8e81f32bb3c51c1277e9d6e0697",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10602,

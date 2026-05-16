@@ -1,0 +1,21 @@
+{
+    "name": "maturin-bin",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"maturin\" --no-build-isolation"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "only-arches": ["x86_64"],
+            "url": "https://files.pythonhosted.org/packages/c7/7d/a1be934690cdcc3c6609769ceaad322ab7501c2ee5bafcac1b14d609e403/maturin-1.13.3-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl",
+            "sha256": "4667ef609ab446c1b5e0bfe4f9fb99699ab6d8548433f8d1a684256e0b67217f"
+        },
+        {
+            "type": "file",
+            "only-arches": ["aarch64"],
+            "url": "https://files.pythonhosted.org/packages/18/f5/372ae19b72ce8f6e37e5864ae4dc5b252ee9fce0619ccc3aa366aa3a7f97/maturin-1.13.3-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.musllinux_1_1_aarch64.whl",
+            "sha256": "3db93337ed97e60ffc878aa8b493cd7ae44d3a5e1a37256db3a4491f57565018"
+        }
+    ]
+}

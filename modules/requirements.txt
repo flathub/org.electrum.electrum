@@ -1,0 +1,15 @@
+aiohttp
+aiohttp-socks
+aiorpcX
+bitstring
+certifi
+dnspython
+ecdsa
+helpdev
+idna_ssl
+protobuf
+QDarkStyle
+qrcode
+colorama
+cbor2
+pyserial

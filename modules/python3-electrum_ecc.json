@@ -1,0 +1,14 @@
+{
+    "name": "python3-electrum_ecc",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"electrum_ecc\" --no-build-isolation"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/5f/cd/4b7c7113dd949014abe44e235da68c06f21e902c12dc7e969a91262cca61/electrum_ecc-0.0.7.tar.gz",
+            "sha256": "ed4134e1dbff0fd83022764c6acc97a02cde3512927d7c41f4d48b9a06e91fb2"
+        }
+    ]
+}

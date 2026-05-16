@@ -1,0 +1,14 @@
+{
+    "name": "python3-tibs",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"tibs\" --no-build-isolation"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/a1/8f/34ed6e69a388391442d16260c93f75295b5d925598255bc8b67a9df207db/tibs-0.7.0.tar.gz",
+            "sha256": "0735807897dca55ecc86acfa0797b423a1937b1a155421519d5ae93299b10564"
+        }
+    ]
+}
