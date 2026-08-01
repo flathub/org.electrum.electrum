@@ -2,10 +2,10 @@
     "id": "org.electrum.electrum",
     "runtime": "org.freedesktop.Platform",
     "sdk": "org.freedesktop.Sdk",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "command": "electrum",
     "finish-args": [
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--socket=wayland",
         "--share=ipc",
         "--device=all",
@@ -21,6 +21,9 @@
     "modules": [
         {
             "name": "electrum",
+            "only-arches": [
+                "x86_64"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "chmod +x electrum-*.AppImage",
@@ -40,9 +43,6 @@
                     "type": "file",
                     "url": "https://download.electrum.org/4.8.0/electrum-4.8.0-x86_64.AppImage",
                     "sha256": "ed69e145c56d454600116b6efc2ad759d68de288a9d56428bfb48dfcc3b89354",
-                    "only-arches": [
-                        "x86_64"
-                    ],
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10602,

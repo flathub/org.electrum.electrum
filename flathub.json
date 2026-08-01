@@ -1,4 +1,6 @@
 {
   "enable-external-data-checker": true,
-  "automerge-flathubbot-prs": true
+  "only-arches": [
+    "x86_64"
+  ]
 }
