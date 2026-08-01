@@ -31,8 +31,113 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="4.8.0" date="2026-07-10">
+      <description>
+        <ul>
+          <li>security: fix CVE-2012-2459 in SPV verification — reject left-sibling duplicates (#10568)</li>
+          <li>new: support LNURL LUD-17 payment identifiers (#10575)</li>
+          <li>new: detect when opening a wallet file created on a different chain (#10592)</li>
+          <li>changed: remove support for BIP-70 payment identifiers (#10535)</li>
+          <li>changed: refuse to pay LNURL-pay identifiers if a 'successAction' field is present (#10712)</li>
+          <li>fix: update CoinGecko exchange rate provider; remove broken CoinDesk provider (#10572, #10720)</li>
+          <li>lightning: lazy trampoline forwarding without network graph (#10544); require anchor outputs for new channels (#10622)</li>
+          <li>lightning: towards bolt12 — add merkle tree signing scheme (#10597)</li>
+          <li>hardware wallets: new Trezor Safe 7 support (#10677); Ledger legacy bitcoin app compatibility fix (#10603)</li>
+          <li>QML/Android: support renaming wallets (#10573); minimum Android raised to 8.0</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.7.2" date="2026-04-02">
+      <description>
+        <ul>
+          <li>security: External Plugin authorization bypass — local code execution (GHSA-vw94-r84p-66qf)</li>
+          <li>security: Nostr Wallet Connect plugin daily spending limit bypass (GHSA-q7m2-785w-r585)</li>
+          <li>changed: set restrictive unix umask (0077) application-wide by default (#10547)</li>
+          <li>fix: failing assert for wallets with old unpaid LN payment requests (#10502)</li>
+          <li>Qt GUI: move LN fee slider to payment dialog (#10516)</li>
+          <li>submarine swaps: fix Swap Providers window losing track of providers; fix percentage rounding errors (#10528)</li>
+          <li>daemon: forbid setconfig to change rpcserver settings in-flight; GUI mode starts only limited RPC server (#10534, #10548)</li>
+          <li>timelock_recovery plugin: fix checksum calculation per BIP-0128 (#10524)</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.7.1" date="2026-02-26">
+      <description>
+        <ul>
+          <li>new: changelog website accessible from Help toolbar menu (#10433)</li>
+          <li>new: show translation completion percentage in language names (#10479)</li>
+          <li>new: allow changing font size in console (#10494)</li>
+          <li>changed: validate Electrum server address input with UI feedback (#10441)</li>
+          <li>fix: broken addresses tab for imported watch-only wallets (#10436)</li>
+          <li>fix: improved fee estimation for replacement transactions (#10453)</li>
+          <li>fix: handle wallet DB upgrade failure for users with pending Lightning HTLCs (#10489)</li>
+          <li>hardware wallets: new Ledger Nano Gen 5 support (#10457)</li>
+          <li>lightning: improved safety when revealing preimage on-chain; gossip fixes (#10442, #10448, #10493)</li>
+          <li>translations: call for proofreaders after malicious string injections found in electrum-locale repo</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.7.0" date="2026-01-22">
+      <description>
+        <ul>
+          <li>new: Submarine Payments — reverse swaps to external address, onchain payments from lightning balance (#10303)</li>
+          <li>new: support LNURL-withdraw / LUD-03 (#9993)</li>
+          <li>new: Electrum Protocol version 1.6 support (#10295)</li>
+          <li>new: QML/Android — manual fee editing, biometric authentication (#10340, #10371)</li>
+          <li>new: CLI export_lightning_preimage command (#10242)</li>
+          <li>changed: non-SPV verified transactions now considered unconfirmed (#10216)</li>
+          <li>changed: always enforce dnssec validation for Openalias (#10349)</li>
+          <li>removed: payserver plugin, now external at spesmilo/electrum-payserver (d36b753)</li>
+          <li>Android: support 16kb page size; bump target SDK to 35; OpenSSL 3.0.18; Python 3.11.14</li>
+          <li>AppImage: migrate build to use modern/maintained appimagetool (#10019)</li>
+        </ul>
+      </description>
+    </release>
     <release version="4.6.2" date="2025-08-25">
-      <description></description>
+      <description>
+        <ul>
+          <li>changed: minrelayfee clamps from [1, 50] to [0.1, 50] sat/vbyte (#10096)</li>
+          <li>new: add support for "mutinynet" signet test network (#10134)</li>
+          <li>new: network won't request same tx from server that we just broadcast (#10111)</li>
+          <li>new: logging config LOGS_MAX_TOTAL_SIZE_BYTES to limit log size on disk (#10159)</li>
+          <li>fix: cannot open keystore-encryption-only wallets on Android (#10171)</li>
+          <li>lightning: slow down peers sending too much gossip and other rate-limits (#10153)</li>
+          <li>CLI: reverse_swap new mandatory 'prepayment' parameter; new get_submarine_swap_providers command (#10158, #10165)</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.6.1" date="2025-08-05">
+      <description>
+        <ul>
+          <li>fix: QR scanner crashes on Android due to null/orphaned View (#10071)</li>
+          <li>fix: creating a tx with a pre-segwit watchonly wallet (#10042)</li>
+          <li>fix: several bugs in new hold_invoice APIs; minor breaking changes (#10059, #10082)</li>
+          <li>new: lnpay command accepts max_cltv, max_fee_msat parameters (#10067)</li>
+          <li>hardware wallets: bitbox02 bumped to 7.0.0 — adds BitBox02 "Nova" support (#10040)</li>
+          <li>reworked crash reporter — always shown on uncaught exceptions (#10052)</li>
+          <li>new: parallelize block-header-chunks downloads (#10033)</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.6.0" date="2025-07-16">
+      <description>
+        <ul>
+          <li>Terms of Use screen added to the install wizard</li>
+          <li>Nostr support via new dependency electrum-aionostr; submarine swaps over Nostr — anyone can run a swap server</li>
+          <li>Third-party plugins: install plugins distributed as ZIP files on desktop binaries, gated by a plugin authorization password</li>
+          <li>Lightning: anchor channels by default (#9264); support for onion messages (#9039)</li>
+          <li>Qt Desktop GUI: migrated from Qt5 to Qt6 (#9189); screenshot "protection" on Windows (#9898)</li>
+          <li>Wallet unlocking: password kept in memory so signing transactions doesn't require re-entering password</li>
+          <li>Transaction batching: drop-down menu proposes batching new payment into existing mempool txns</li>
+          <li>Keystore enabling/disabling: add a seed to existing watching-only wallet or pair with hardware device</li>
+          <li>Lightning address contacts; accounting addresses for force-closure transactions rendered in orange</li>
+          <li>New plugins: Nostr Wallet Connect (NIP-47), Nostr Cosigner (replaces Cosigner pool), Timelock Recovery</li>
+          <li>CLI: improved help; hold invoices; new commands (listconfig, onchain_capital_gains, hold_invoice commands)</li>
+          <li>Hardware wallets: Coldcard multisig config upload via USB; KeepKey vendored fork; Ledger HW.1/Nano support removed</li>
+          <li>Min OS: Windows 10 (1809) x86_64; macOS 11; Linux AppImage x86_64 glibc 2.31</li>
+          <li>Min Python 3.10; new first-party deps electrum-aionostr and electrum-ecc</li>
+        </ul>
+      </description>
     </release>
     <release version="4.5.8" date="2024-10-24">
       <description>

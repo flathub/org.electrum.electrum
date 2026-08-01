@@ -1,120 +1,58 @@
 {
     "id": "org.electrum.electrum",
-    "sdk": "org.kde.Sdk",
-    "runtime": "org.kde.Platform",
-    "runtime-version": "6.9",
-    "base": "com.riverbankcomputing.PyQt.BaseApp",
-    "base-version": "6.9",
+    "runtime": "org.freedesktop.Platform",
+    "sdk": "org.freedesktop.Sdk",
+    "runtime-version": "24.08",
     "command": "electrum",
     "finish-args": [
         "--socket=x11",
-        "--env=QT_QPA_PLATFORM=xcb",
-        "--socket=pulseaudio",
-        "--persist=.electrum",
-        "--device=all",
+        "--socket=wayland",
         "--share=ipc",
-        "--share=network"
+        "--device=all",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--talk-name=org.kde.StatusNotifierWatcher",
+        "--persist=.electrum"
     ],
-    "build-options": {
-        "env": {
-            "BASEAPP_REMOVE_WEBENGINE": "1"
-        }
-    },
     "cleanup": [
         "/include",
         "/share/man/man1"
     ],
-    "cleanup-commands": [
-        "/app/cleanup-BaseApp.sh"
-    ],
     "modules": [
-        "shared-modules/libusb/libusb.json",
-        "libsecp256k1.json",
-        {
-            "name": "zbar",
-            "buildsystem": "autotools",
-            "config-opts": [
-                "--disable-doc",
-                "--disable-video",
-                "--enable-codes=qrcode",
-                "--with-python=python3",
-                "--without-dbus",
-                "--without-gtk",
-                "--without-imagemagick",
-                "--without-java",
-                "--without-npapi",
-                "--without-qt",
-                "--without-qt5",
-                "--without-xshm",
-                "--without-xv"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://linuxtv.org/downloads/zbar/zbar-0.23.93.tar.gz",
-                    "sha256": "78ae427a529f0399561bc198de5c2c7ca3f11d05fa9e903e65e501168433d218"
-                }
-            ]
-        },
-        "python3-requirements-binaries.json",
-        "python3-requirements.json",
-        "python3-requirements-hw.json",
-        "python3-jsonpatch.json",
-        {
-            "name": "python3-electrum_ecc",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"electrum_ecc\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/1a/c2/500b5b89c7c4d930127b86dafa066cf2cfec0442edcff349112dad60d980/electrum_ecc-0.0.6.tar.gz",
-                    "sha256": "6360c71fb08b51d80a455e938f126ba4c790be74ba226461d54d7a3aa6890b89"
-                }
-            ]
-        },
-        {
-            "name": "python3-electrum_aionostr",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"electrum_aionostr\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9b/54/1e6d5b3745a681b34b5256c332535f4c10749f34f49d526d8ae206acc6a6/electrum_aionostr-0.0.11.tar.gz",
-                    "sha256": "0eeb1d01e55d4bab2c116268965a0b2c11490659e969fd864c453104558bcf81"
-                }
-            ]
-        },
         {
             "name": "electrum",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[full]",
-                "install -Dp -m 644 org.electrum.electrum.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml",
-                "install -Dp -m 644 electrum/gui/icons/electrum.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png",
-                "install -Dp -m 644 electrum.desktop /app/share/applications/${FLATPAK_ID}.desktop",
-                "desktop-file-edit --set-key=\"Icon\" --set-value=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop",
-                "desktop-file-edit --set-key=\"Exec\" --set-value=electrum /app/share/applications/${FLATPAK_ID}.desktop"
+                "chmod +x electrum-*.AppImage",
+                "./electrum-*.AppImage --appimage-extract >/dev/null",
+                "mkdir -p ${FLATPAK_DEST}/electrum",
+                "cp -a squashfs-root/. ${FLATPAK_DEST}/electrum/",
+                "ln -sf libusb-1.0.so ${FLATPAK_DEST}/electrum/usr/lib/libusb-1.0.so.0",
+                "install -Dp -m 644 org.electrum.electrum.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml",
+                "install -Dp -m 644 squashfs-root/electrum.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png",
+                "install -Dp -m 644 squashfs-root/electrum.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop",
+                "desktop-file-edit --set-key=Icon --set-value=${FLATPAK_ID} ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop",
+                "desktop-file-edit --set-key=Exec --set-value=electrum ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop",
+                "install -Dp -m 755 electrum.sh ${FLATPAK_DEST}/bin/electrum"
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://download.electrum.org/4.6.2/Electrum-4.6.2.tar.gz",
-                    "sha256": "66bc3301e78c36bb3a2b32c60e0e68045ec4f8618b60255cccee91d7c4ca46e1",
+                    "type": "file",
+                    "url": "https://download.electrum.org/4.8.0/electrum-4.8.0-x86_64.AppImage",
+                    "sha256": "ed69e145c56d454600116b6efc2ad759d68de288a9d56428bfb48dfcc3b89354",
+                    "only-arches": [
+                        "x86_64"
+                    ],
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10602,
                         "version-pattern": "^([\\d.]+)$",
-                        "url-template": "https://download.electrum.org/$version/Electrum-$version.tar.gz"
+                        "url-template": "https://download.electrum.org/$version/electrum-$version-x86_64.AppImage"
                     }
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/33/cf/8435d5a7159e2a9c83a95896ed596f68cf798005fe107cc655b5c5c14704/urllib3-1.26.20-py2.py3-none-any.whl",
-                    "sha256": "0ed14ccfbf1c30a9072c7ca157e4319b70d65f623e91e7b32fadb2853431016e"
+                    "path": "electrum.sh"
                 },
                 {
                     "type": "file",
