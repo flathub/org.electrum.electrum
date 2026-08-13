@@ -7,13 +7,74 @@
             "name": "python3-base58",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"base58==2.1.0\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"base58==2.1.1\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b8/a1/d9f565e9910c09fd325dc638765e8843a19fa696275c16cc08cf3b0a3c25/base58-2.1.0-py3-none-any.whl",
-                    "sha256": "8225891d501b68c843ffe30b86371f844a21c6ba00da76f52f9b998ba771fb48"
+                    "url": "https://files.pythonhosted.org/packages/4a/45/ec96b29162a402fc4c1c5512d114d7b3787b9d1c2ec241d9568b4816ee23/base58-2.1.1-py3-none-any.whl",
+                    "sha256": "11a36f4d3ce51dfc1043f3218591ac4eb1ceb172919cebe05b52a5bcc8d245c2"
+                }
+            ]
+        },
+        {
+            "name": "python3-ecdsa",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ecdsa==0.19.2\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl",
+                    "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/51/79/119091c98e2bf49e24ed9f3ae69f816d715d2904aefa6a2baa039a2ba0b0/ecdsa-0.19.2-py2.py3-none-any.whl",
+                    "sha256": "840f5dc5e375c68f36c1a7a5b9caad28f95daa65185c9253c0c08dd952bb7399"
+                }
+            ]
+        },
+        {
+            "name": "python3-libusb1",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"libusb1==3.3.1\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/10/f7/4577cfc55c9520ecab5563173e83235382ac7980c8c2c08d6c9f7ef9e615/libusb1-3.3.1-py3-none-any.whl",
+                    "sha256": "808c9362299dcee01651aa87e71e9d681ccedb27fc4dbd70aaf14e245fb855f1"
+                }
+            ]
+        },
+        {
+            "name": "python3-mnemonic",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"mnemonic==0.21\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/57/48/5abb16ce7f9d97b728e6b97c704ceaa614362e0847651f379ed0511942a0/mnemonic-0.21-py3-none-any.whl",
+                    "sha256": "72dc9de16ec5ef47287237b9b6943da11647a03fe7cf1f139fc3d7c4a7439288"
+                }
+            ]
+        },
+        {
+            "name": "python3-protobuf",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"protobuf==3.20.3\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/55/5b/e3d951e34f8356e5feecacd12a8e3b258a1da6d9a03ad1770f28925f29bc/protobuf-3.20.3.tar.gz",
+                    "sha256": "2e3427429c9cffebf259491be0af70189607f365c2f41c7c3764af6f337105f2"
                 }
             ]
         },
@@ -21,7 +82,7 @@
             "name": "python3-bitbox02",
             "buildsystem": "simple",
             "build-commands": [
-                "env C_INCLUDE_PATH=/app/include/libusb-1.0 pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"bitbox02\""
+                "env C_INCLUDE_PATH=/app/include/libusb-1.0 pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"bitbox02==7.0.0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -36,8 +97,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/47/72/21ccaaca6ffb06f544afd16191425025d831c2a6d318635e9c8854070f2d/hidapi-0.14.0.post4.tar.gz",
-                    "sha256": "48fce253e526d17b663fbf9989c71c7ef7653ced5f4be65f1437c313fb3dbdf6"
+                    "url": "https://files.pythonhosted.org/packages/74/f6/caad9ed701fbb9223eb9e0b41a5514390769b4cb3084a2704ab69e9df0fe/hidapi-0.15.0.tar.gz",
+                    "sha256": "ecbc265cbe8b7b88755f421e0ba25f084091ec550c2b90ff9e8ddd4fcd540311"
                 },
                 {
                     "type": "file",
@@ -52,44 +113,16 @@
             ]
         },
         {
-            "name": "python3-btchip-python",
+            "name": "python3-cbor2",
             "buildsystem": "simple",
             "build-commands": [
-                "env C_INCLUDE_PATH=/app/include/libusb-1.0 pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} ."
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/30/fd/16394adaff5736840aeda77163d5f6f593091d687a1807ff02dedcfc7bca/btchip-python-0.1.32.tar.gz",
-                    "sha256": "34f5e0c161c08f65dc0d070ba2ff4c315ed21c4b7e0faa32a46862d0dc1b8f55"
-                },
-                {
-                    "type": "patch",
-                    "path": "btchip.patch"
-                }
-            ]
-        },
-        {
-            "name": "python3-ledger-bitcoin",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ledger-bitcoin<0.3.0,>=0.2.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"cbor2==5.9.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ab/c3/57f0601a2d4fe15de7a553c00adbc901425661bf048f2a22dfc500caf121/packaging-23.1-py3-none-any.whl",
-                    "sha256": "994793af429502c4ea2ebf6bf664629d07c1a9fe974af92966e4b8d2df7edc61"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/43/5a/d2cdbea659fe725644014dbb0ac93a4f8e3d2b4f6ed914bcf212165c596f/ledgercomm-1.2.0-py3-none-any.whl",
-                    "sha256": "e21fdaca6bc82b32d3acdd1b1a2c9e2ff3e47559e56c981b40fd8954605ad096"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ba/f6/9c63c0f3a0bf2a1808c82e3cfd87b8fd1ee67ab72d941ebc8f3c68cdc9f9/ledger_bitcoin-0.2.1-py3-none-any.whl",
-                    "sha256": "1160aa887df9f88539110c3c88535fc838cfff26600a326df23b4a09f09036f1"
+                    "url": "https://files.pythonhosted.org/packages/42/ff/b83492b096fbef26e9cb62c1a4bf2d3cef579ea7b33138c6c37c4ae66f67/cbor2-5.9.0-py3-none-any.whl",
+                    "sha256": "27695cbd70c90b8de5c4a284642c2836449b14e2c2e07e3ffe0744cb7669a01b"
                 }
             ]
         },
@@ -97,7 +130,7 @@
             "name": "python3-ckcc-protocol",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ckcc-protocol==1.0.3\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ckcc-protocol==1.5.0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -107,69 +140,41 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6a/96/a12745fc16d3f5a0d0eda1677a6c8572b729acd7b5c84e5a33d0a94986e7/ckcc_protocol-1.0.3-py3-none-any.whl",
-                    "sha256": "ffa79816629c0a2aa59b76dbf765bd2e12ef71225c757252f3a3613cdf8a0b39"
+                    "url": "https://files.pythonhosted.org/packages/6c/a7/012965632c5936d20f7caa5abdf5ed215745a96d1ffe19cb21782fd2f22e/ckcc_protocol-1.5.0-py3-none-any.whl",
+                    "sha256": "7ca2e7660d2d321195856bf9b7402ac7ff7bf088e8f79c007b9ec6244fbf73c4"
                 }
             ]
         },
         {
-            "name": "python3-click",
+            "name": "python3-ledger-bitcoin",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"click==7.1.2\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ledger-bitcoin==0.4.1\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d2/3d/fa76db83bf75c4f8d338c2fd15c8d33fdd7ad23a9b5e57eb6c5de26b430e/click-7.1.2-py2.py3-none-any.whl",
-                    "sha256": "dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"
-                }
-            ]
-        },
-        {
-            "name": "python3-construct",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"construct==2.10.61\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/13/92/517dd8f4b4f79d75a15b1c9c68e510cb323da0ff098f7ed62d2fdda525db/construct-2.10.61.tar.gz",
-                    "sha256": "d75384a04cb36ae5417dd34ce230c392e6085d872ab8a99ebd756c34bac0dff5"
-                }
-            ]
-        },
-        {
-            "name": "python3-mnemonic",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"mnemonic==0.20\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ae/95/3e07c33ffb26f5823b45a1c30db8acea44763198c2bd393e07e884f3295f/mnemonic-0.20-py3-none-any.whl",
-                    "sha256": "acd2168872d0379e7a10873bb3e12bf6c91b35de758135c4fbd1015ef18fafc5"
-                }
-            ]
-        },
-        {
-            "name": "python3-keepkey",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"keepkey==6.3.1\""
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/14/bd/29515a44719569aa0942551571d89539a1c0633eb78a6d695b462145827f/libusb1-1.9.2-py3-none-any.whl",
-                    "sha256": "c3dd4df43b5c38f65bf599413810d021f5f98396c4b6f66765fb98193aca11b0"
+                    "url": "https://files.pythonhosted.org/packages/c6/07/633e1da1b002822d18614e7faf924bc7c3064a11b1879cc0fd4a153d727c/ledgercomm-1.2.1-py3-none-any.whl",
+                    "sha256": "8ffef5703355b8ec7b73bca325f70288f4d0dafcb299c09833de9c197fb6dd34"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5c/c9/66a88ff4294e90186126ef53ceb2757368a469e5294f1ce66401e24adef8/keepkey-6.3.1-py3-none-any.whl",
-                    "sha256": "88e2b5291c85c8e8567732f675697b88241082884aa1aba32257f35ee722fc09"
+                    "url": "https://files.pythonhosted.org/packages/b0/7b/7cf6f454a93be53792f4583f3de54039d4e278b661e6d48805d9e5ec811b/ledger_bitcoin-0.4.1-py3-none-any.whl",
+                    "sha256": "b1fe1cdfd0f869f1e27968118832b11708904f71840b0a97219a0492ce1a7002"
+                }
+            ]
+        },
+        {
+            "name": "python3-pyserial",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyserial==3.5\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/07/bc/587a445451b253b285629263eb51c2d8e9bcea4fc97826266d186f96f558/pyserial-3.5-py2.py3-none-any.whl",
+                    "sha256": "c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0"
                 }
             ]
         },
@@ -177,18 +182,23 @@
             "name": "python3-requests",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"requests\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"requests==2.34.2\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/96/94/c31f58c7a7f470d5665935262ebd7455c7e4c7782eb525658d3dbf4b9403/urllib3-2.1.0-py3-none-any.whl",
-                    "sha256": "55901e917a5896a349ff771be919f8bd99aff50b79fe58fec595eb37bbc56bb3"
+                    "url": "https://files.pythonhosted.org/packages/33/cf/8435d5a7159e2a9c83a95896ed596f68cf798005fe107cc655b5c5c14704/urllib3-1.26.20-py2.py3-none-any.whl",
+                    "sha256": "0ed14ccfbf1c30a9072c7ca157e4319b70d65f623e91e7b32fadb2853431016e"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl",
-                    "sha256": "58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f"
+                    "url": "https://files.pythonhosted.org/packages/db/8f/61959034484a4a7c527811f4721e75d02d653a35afb0b6054474d8185d4c/charset_normalizer-3.4.7-py3-none-any.whl",
+                    "sha256": "3dce51d0f5e7951f8bb4900c257dad282f49190fdbebecd4ba99bcc41fef404d"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl",
+                    "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
                 }
             ]
         },
@@ -196,7 +206,7 @@
             "name": "python3-safet",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"safet==0.1.5\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"safet==0.1.5\" --no-build-isolation --no-deps"
             ],
             "sources": [
                 {
@@ -207,21 +217,44 @@
             ]
         },
         {
-            "name": "python3-trezor",
+            "name": "python3-shamir-mnemonic",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-build-isolation --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"trezor==0.13.0\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"shamir-mnemonic==0.3.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/04/13/de9cf71d5ae317163a863e8e0f3b6f71ed9d74732a2d1ee5fe1ab83861e2/simple-rlp-0.1.2.tar.gz",
-                    "sha256": "5c4a9c58f1b742f7fa8af0fe4ea6ff9fb02294ae041912f771570dfaf339d2b9"
-                },
+                    "url": "https://files.pythonhosted.org/packages/1d/38/2124e565afe40993949dbc89da6c654a2c9a1b24dd80039812ef7cdbaef3/shamir_mnemonic-0.3.0-py3-none-any.whl",
+                    "sha256": "188c6b5bd00d5e756e12e2b186c3cb7c98ff7ff44df608d4c1d2077f6b6e730f"
+                }
+            ]
+        },
+        {
+            "name": "python3-slip10",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"slip10==1.1.0\" --no-build-isolation"
+            ],
+            "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/11/25/7c1edad18d8959ac4461a251cca2c9fa031d4d8ae1c7c3665502ae5ec068/trezor-0.13.0-py3-none-any.whl",
-                    "sha256": "8c79aab2ea30440a4c6a1380c0373a848f11730bcde43b3de5280a927a8e82cc"
+                    "url": "https://files.pythonhosted.org/packages/d6/34/75d55507e384a795a332e3b1f1f294b9a5ce230c99fa670dd6c727d6dfdd/slip10-1.1.0-py3-none-any.whl",
+                    "sha256": "c9baa9fb463f06321ede45b365d431752201a5d5a9465095e44c93df26053ee3"
+                }
+            ]
+        },
+        {
+            "name": "python3-trezor",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"trezor==0.20.1\" --no-build-isolation --no-deps"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/13/d1/64775ccfd5375a8cc484aed707386210f37e3a624185d1d265ca764427af/trezor-0.20.1-py3-none-any.whl",
+                    "sha256": "6de50703102f90dc5399d40dd7c8134d13b6c54a617d41178b081baf2aeb2b91"
                 }
             ]
         }
