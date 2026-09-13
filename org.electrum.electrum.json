@@ -69,8 +69,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5f/cd/4b7c7113dd949014abe44e235da68c06f21e902c12dc7e969a91262cca61/electrum_ecc-0.0.7.tar.gz",
-                    "sha256": "ed4134e1dbff0fd83022764c6acc97a02cde3512927d7c41f4d48b9a06e91fb2"
+                    "url": "https://files.pythonhosted.org/packages/f0/aa/3aab38ecdf6276141264c91c50758df6e59545c87f18247d99b22e62b76f/electrum_ecc-0.0.8.tar.gz",
+                    "sha256": "94869a77de28ee79b7f7e974af5c20b392b949905880a8b26504e28202644106"
                 }
             ]
         },
@@ -102,8 +102,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.electrum.org/4.8.1/Electrum-4.8.1.tar.gz",
-                    "sha256": "ef5b7f61d2c8b5983a0f9c851556e3a6f78a9dc22fe611bba49c6eebb6bdfdbe",
+                    "url": "https://download.electrum.org/4.8.2/Electrum-4.8.2.tar.gz",
+                    "sha256": "f38cee333c866986cdfb304428fa7487affc429c3853fc80e9822bd420bbc229",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10602,
