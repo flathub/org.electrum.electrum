@@ -31,28 +31,32 @@
         "shared-modules/libusb/libusb.json",
         "libsecp256k1.json",
         {
-            "name": "zbar",
-            "buildsystem": "autotools",
+            "name": "zxing-cpp",
+            "buildsystem": "cmake-ninja",
+            "subdir": "core",
+            "builddir": true,
             "config-opts": [
-                "--disable-doc",
-                "--disable-video",
-                "--enable-codes=qrcode",
-                "--with-python=python3",
-                "--without-dbus",
-                "--without-gtk",
-                "--without-imagemagick",
-                "--without-java",
-                "--without-npapi",
-                "--without-qt",
-                "--without-qt5",
-                "--without-xshm",
-                "--without-xv"
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DBUILD_SHARED_LIBS=ON",
+                "-DZXING_C_API=ON",
+                "-DZXING_READERS=ON",
+                "-DZXING_WRITERS=OFF",
+                "-DZXING_ENABLE_1D=OFF",
+                "-DZXING_ENABLE_AZTEC=OFF",
+                "-DZXING_ENABLE_DATAMATRIX=OFF",
+                "-DZXING_ENABLE_MAXICODE=OFF",
+                "-DZXING_ENABLE_PDF417=OFF",
+                "-DZXING_ENABLE_QRCODE=ON"
+            ],
+            "cleanup": [
+                "/lib/cmake",
+                "/lib/pkgconfig"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://linuxtv.org/downloads/zbar/zbar-0.23.93.tar.gz",
-                    "sha256": "78ae427a529f0399561bc198de5c2c7ca3f11d05fa9e903e65e501168433d218"
+                    "url": "https://github.com/zxing-cpp/zxing-cpp/archive/287c85df6f961c8efbfb5ffd736cd9457b8b890e.tar.gz",
+                    "sha256": "97d952c661b1f79d21aacc2ec544ef05c4d1465f55692cc49622ea6a8166ca7b"
                 }
             ]
         },
@@ -102,8 +106,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.electrum.org/4.8.2/Electrum-4.8.2.tar.gz",
-                    "sha256": "f38cee333c866986cdfb304428fa7487affc429c3853fc80e9822bd420bbc229",
+                    "url": "https://download.electrum.org/4.8.3/Electrum-4.8.3.tar.gz",
+                    "sha256": "df41fa82e579f720a3859bff9de09dd98bb93079b01fa2973b73fdbdbfde7288",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10602,
