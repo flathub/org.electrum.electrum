@@ -2,9 +2,9 @@
     "id": "org.electrum.electrum",
     "sdk": "org.kde.Sdk",
     "runtime": "org.kde.Platform",
-    "runtime-version": "6.9",
+    "runtime-version": "6.11",
     "base": "com.riverbankcomputing.PyQt.BaseApp",
-    "base-version": "6.9",
+    "base-version": "6.11",
     "command": "electrum",
     "finish-args": [
         "--socket=fallback-x11",
@@ -32,28 +32,32 @@
         "shared-modules/libusb/libusb.json",
         "libsecp256k1.json",
         {
-            "name": "zbar",
-            "buildsystem": "autotools",
+            "name": "zxing-cpp",
+            "buildsystem": "cmake-ninja",
+            "subdir": "core",
+            "builddir": true,
             "config-opts": [
-                "--disable-doc",
-                "--disable-video",
-                "--enable-codes=qrcode",
-                "--with-python=python3",
-                "--without-dbus",
-                "--without-gtk",
-                "--without-imagemagick",
-                "--without-java",
-                "--without-npapi",
-                "--without-qt",
-                "--without-qt5",
-                "--without-xshm",
-                "--without-xv"
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DBUILD_SHARED_LIBS=ON",
+                "-DZXING_C_API=ON",
+                "-DZXING_READERS=ON",
+                "-DZXING_WRITERS=OFF",
+                "-DZXING_ENABLE_1D=OFF",
+                "-DZXING_ENABLE_AZTEC=OFF",
+                "-DZXING_ENABLE_DATAMATRIX=OFF",
+                "-DZXING_ENABLE_MAXICODE=OFF",
+                "-DZXING_ENABLE_PDF417=OFF",
+                "-DZXING_ENABLE_QRCODE=ON"
+            ],
+            "cleanup": [
+                "/lib/cmake",
+                "/lib/pkgconfig"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://linuxtv.org/downloads/zbar/zbar-0.23.93.tar.gz",
-                    "sha256": "78ae427a529f0399561bc198de5c2c7ca3f11d05fa9e903e65e501168433d218"
+                    "url": "https://github.com/zxing-cpp/zxing-cpp/archive/287c85df6f961c8efbfb5ffd736cd9457b8b890e.tar.gz",
+                    "sha256": "97d952c661b1f79d21aacc2ec544ef05c4d1465f55692cc49622ea6a8166ca7b"
                 }
             ]
         },
@@ -70,8 +74,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5f/cd/4b7c7113dd949014abe44e235da68c06f21e902c12dc7e969a91262cca61/electrum_ecc-0.0.7.tar.gz",
-                    "sha256": "ed4134e1dbff0fd83022764c6acc97a02cde3512927d7c41f4d48b9a06e91fb2"
+                    "url": "https://files.pythonhosted.org/packages/f0/aa/3aab38ecdf6276141264c91c50758df6e59545c87f18247d99b22e62b76f/electrum_ecc-0.0.8.tar.gz",
+                    "sha256": "94869a77de28ee79b7f7e974af5c20b392b949905880a8b26504e28202644106"
                 }
             ]
         },
@@ -103,8 +107,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.electrum.org/4.8.1/Electrum-4.8.1.tar.gz",
-                    "sha256": "ef5b7f61d2c8b5983a0f9c851556e3a6f78a9dc22fe611bba49c6eebb6bdfdbe",
+                    "url": "https://download.electrum.org/4.8.3/Electrum-4.8.3.tar.gz",
+                    "sha256": "df41fa82e579f720a3859bff9de09dd98bb93079b01fa2973b73fdbdbfde7288",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10602,
