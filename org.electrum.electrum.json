@@ -29,7 +29,6 @@
         "/app/cleanup-BaseApp.sh"
     ],
     "modules": [
-        "shared-modules/libusb/libusb.json",
         "libsecp256k1.json",
         {
             "name": "zxing-cpp",
