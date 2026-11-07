@@ -106,8 +106,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.electrum.org/4.8.3/Electrum-4.8.3.tar.gz",
-                    "sha256": "df41fa82e579f720a3859bff9de09dd98bb93079b01fa2973b73fdbdbfde7288",
+                    "url": "https://download.electrum.org/4.8.4/Electrum-4.8.4.tar.gz",
+                    "sha256": "b3cbeefe37e84f62f6cec096eec28085d7a99097841eb96c9ee3e9bec20b0367",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10602,
